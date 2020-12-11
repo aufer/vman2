@@ -1,0 +1,11 @@
+.data-view {
+
+  &__item {
+    display: flex;
+  }
+
+  &__label {
+    min-width: 100px;
+  }
+  &__content {}
+}

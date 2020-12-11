@@ -1,0 +1,33 @@
+table {
+  font-size: 14px;
+  width: 100%;
+
+  &, th, td {
+    border: 1px solid #8e8e8e;
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 0.5rem 0.25rem;
+    word-break: keep-all;
+  }
+
+  th {
+    background-color: #fecece;
+    text-align: left;
+    cursor: pointer;
+
+    &.active {
+      background-color: #debebe;
+    }
+  }
+
+  tr {
+    background-color: white;
+
+    &:nth-of-type(odd) {
+      background-color: white;
+    }
+  }
+}

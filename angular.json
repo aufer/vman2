@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nx-abi-ui:build"
+            "browserTarget": "nx-abi-ui:build",
+            "proxyConfig": "apps/nx-abi-ui/src/proxy.json"
           },
           "configurations": {
             "production": {
@@ -113,6 +114,77 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/nx-abi-ui-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "nx-abi-shared": {
+      "root": "libs/nx-abi-shared",
+      "sourceRoot": "libs/nx-abi-shared/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nx-abi-shared/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nx-abi-shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nx-abi-bff": {
+      "root": "apps/nx-abi-bff",
+      "sourceRoot": "apps/nx-abi-bff/src",
+      "projectType": "application",
+      "prefix": "nx-abi-bff",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/nx-abi-bff",
+            "main": "apps/nx-abi-bff/src/main.ts",
+            "tsConfig": "apps/nx-abi-bff/tsconfig.app.json",
+            "assets": ["apps/nx-abi-bff/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/nx-abi-bff/src/environments/environment.ts",
+                  "with": "apps/nx-abi-bff/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "nx-abi-bff:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/nx-abi-bff/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/nx-abi-bff/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
