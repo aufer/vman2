@@ -1,5 +1,10 @@
 <abi-page [pageTitle]="member?.lastName + ', ' + member?.firstName">
   <div>
+    <div class="actions">
+      <button [routerLink]="['/members', 'edit', member?._id]" class="actions__edit">Edit</button>
+      <button [routerLink]="['/members', 'edit', member?._id]" class="actions__delete">Delete</button>
+    </div>
+
     <div class="data-view">
       <div class="data-view__item">
         <div class="data-view__label">Name</div>

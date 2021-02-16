@@ -1,0 +1,10 @@
+<div class="form-control" [class.invalid]="errors && errors.length > 0">
+  <label [for]="name" class="form-control__label">{{name}}</label>
+  <input [type]="type" [id]="name" class="form-control__input"
+         [value]="value" [disabled]="disabled"
+         (input)="valueChange($event)">
+</div>
+
+<div class="form-errors">
+  <p *ngFor="let err of errors">{{err}}</p>
+</div>

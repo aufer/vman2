@@ -1,0 +1,40 @@
+<abi-page [pageTitle]="entity?.lastName + ', ' + entity?.firstName">
+  <form [formGroup]="formGroup" style="max-width: 500px">
+    <abi-text-input formControlName="firstName" name="firstName"></abi-text-input>
+    <abi-text-input formControlName="lastName" name="lastName"></abi-text-input>
+    <abi-text-input type="date" formControlName="birthDate" name="birthDate"></abi-text-input>
+
+    <abi-text-input formControlName="street" name="street"></abi-text-input>
+    <abi-text-input formControlName="streetNo" name="streetNo"></abi-text-input>
+    <abi-text-input formControlName="addition" name="addition"></abi-text-input>
+    <abi-text-input formControlName="location" name="location"></abi-text-input>
+    <abi-text-input formControlName="postCode" name="postCode"></abi-text-input>
+
+    <abi-text-input formControlName="phone" name="phone"></abi-text-input>
+    <abi-text-input formControlName="mobile" name="mobile"></abi-text-input>
+    <abi-text-input formControlName="email" name="email"></abi-text-input>
+
+    <abi-text-input type="number" formControlName="premium" name="premium"></abi-text-input>
+
+    <abi-text-input formControlName="iban" name="iban"></abi-text-input>
+    <abi-text-input formControlName="bic" name="bic"></abi-text-input>
+    <abi-text-input formControlName="sepaRef" name="sepaRef"></abi-text-input>
+
+    <div class="form-control">
+      <label for="state" class="form-control__label">state</label>
+      <input type="text" id="state" formControlName="state" class="form-control__input">
+    </div>
+
+    <abi-text-input type="date" formControlName="joined" name="joined"></abi-text-input>
+    <abi-text-input type="date" formControlName="terminated" name="terminated"></abi-text-input>
+  </form>
+
+  <div class="actions">
+    <button class="actions__cancel" (click)="abort()">Abbrechen</button>
+    <button class="actions__save" (click)="save()">Speichern</button>
+  </div>
+
+  <div class="form-errors" *ngIf="formGroup.invalid">
+
+  </div>
+</abi-page>

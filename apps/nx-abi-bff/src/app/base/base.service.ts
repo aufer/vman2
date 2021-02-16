@@ -17,12 +17,11 @@ export abstract class BaseService<T extends Document> {
     return entity.save();
   }
 
-  update(record: T): Promise<T> {
-    const entity = new this.data(record);
-    return entity.save();
+  update(record: any): Promise<T> {
+    return this.data.findByIdAndUpdate(record._id, record).exec();
   }
 
   delete(record: T): Promise<T> {
-    return this.data.findByIdAndDelete(record.id).exec();
+    return this.data.findByIdAndDelete(record._id).exec();
   }
 }

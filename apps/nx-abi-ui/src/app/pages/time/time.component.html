@@ -1,1 +1,4 @@
 <h1>Zeiterfassung</h1>
+<form [formGroup]="formGroup">
+  <abi-select formControlName="employeeSelection" [options]="employees" [displayProperty]="'firstName'"></abi-select>
+</form>

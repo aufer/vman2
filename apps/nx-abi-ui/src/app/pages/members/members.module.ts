@@ -1,20 +1,23 @@
-import { NgModule }               from '@angular/core';
-import { CommonModule }           from '@angular/common';
-import { MemberDetailsComponent } from './member-details.component';
-import { MembersRoutingModule }   from './members.routing';
-import { MembersComponent }       from './members.component';
-import { TableModule }            from '../../components/table/table.module';
-import { PageModule }             from '../../components/page/page.module';
-import { DataViewModule }         from '../../components/data-view/data-view.module';
+import { NgModule }                                                from '@angular/core';
+import { CommonModule }                                            from '@angular/common';
+import { ReactiveFormsModule }                                     from '@angular/forms';
+import { MemberDetailsComponent }                                  from './member-details.component';
+import { MemberFormComponent }                                     from './member-form.component';
+import { MembersComponent }                                        from './members.component';
+import { MembersRoutingModule }                                    from './members.routing';
+import { AbiFormsModule, DataViewModule, PageModule, TableModule } from '../../components';
 
 @NgModule({
-  declarations: [MembersComponent, MemberDetailsComponent],
+  declarations: [MembersComponent, MemberDetailsComponent, MemberFormComponent],
   imports: [
     CommonModule,
     TableModule,
+    AbiFormsModule,
     MembersRoutingModule,
     PageModule,
     DataViewModule,
+    ReactiveFormsModule,
   ]
 })
-export class MembersModule {}
+export class MembersModule {
+}

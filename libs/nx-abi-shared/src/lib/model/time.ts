@@ -2,8 +2,8 @@ import { Document }  from 'mongoose';
 import { IEmployee } from './employee';
 
 export interface TimeEntry extends Document {
-  start: Date;
-  end: Date;
+  day: Date;
+  hours: number
   break: number;
   details?: string;
   employee: IEmployee;

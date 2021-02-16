@@ -1,22 +1,33 @@
-import { Component }  from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { IMember }    from '@nx-abi-mgmt/nx-abi-shared';
-import { Router }     from '@angular/router';
+import { HttpClient }                 from '@angular/common/http';
+import { Component }                  from '@angular/core';
+import { Router }                     from '@angular/router';
+import { IMember }                    from '@nx-abi-mgmt/nx-abi-shared';
+import { PageWithTable, TableConfig } from '../../util';
 
 @Component({
   templateUrl: 'members.component.html',
 })
-export class MembersComponent {
-  members: IMember[];
+export class MembersComponent extends PageWithTable<IMember> {
 
-  constructor(private http: HttpClient, private router: Router) {
-    http.get('//localhost:3333/api/members').toPromise().then((res: { data: IMember[] }) => {
-      this.members = res.data;
-    });
+  private _tableConfig: TableConfig<IMember> = {
+    hiddenColumns: ['sepaRef', 'street', 'streetNo', 'addition', 'postCode', 'bic'],
+    columnConfigs: [
+      {name: 'joined', isDate: true},
+      {name: 'email', isLink: true, linkPrefix: 'mailto'},
+      {name: 'phone', isLink: true, linkPrefix: 'tel'},
+      {name: 'mobile', isLink: true, linkPrefix: 'tel'},
+    ]
   }
 
-  showDetails(member: IMember) {
-    console.log(member);
-    this.router.navigate(['members', member._id]);
+  constructor(protected http: HttpClient, protected router: Router) {
+    super(http, router);
+  }
+
+  get name() {
+    return 'members'
+  }
+
+  get tableConfig() {
+    return this._tableConfig;
   }
 }

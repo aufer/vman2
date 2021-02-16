@@ -1,0 +1,30 @@
+.form-control {
+  display: flex;
+  width: 100%;
+
+  & > * {
+    font-size: 14px;
+  }
+
+  &__label {
+    font-size: 16px;
+    min-width: 100px;
+    padding: calc(0.75rem + 1px) 0;
+  }
+
+  &__input {
+    border: 1px solid #dedede;
+    padding: .75rem;
+    flex: 1 100%;
+    font-size: 14px;
+  }
+}
+
+.form-errors {
+  display: none;
+  background-color: #fedede;
+  border: 1px solid indianred;
+  color: darkred;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+}

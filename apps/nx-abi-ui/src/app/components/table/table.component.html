@@ -2,6 +2,7 @@
   <thead>
   <tr>
     <th>#</th>
+    <th></th>
     <th *ngFor="let col of tableModel?.columns" (click)="tableModel.orderBy(col)" [class.active]="tableModel.config.orderBy === col">
       {{col}}
       <span *ngIf="tableModel.config.orderBy === col">
@@ -13,7 +14,15 @@
   <tbody>
   <tr *ngFor="let emp of tableModel?.data; let i = index">
     <td (click)="elementSelected.next(emp)"><a href="javascript:void(0)">{{i}}</a></td>
-    <td *ngFor="let colName of tableModel?.columns">{{tableModel.render(colName, emp)}}</td>
+    <td (click)="editElement.next(emp)"><a href="javascript:void(0)">Edit</a></td>
+    <td *ngFor="let colName of tableModel?.columns">
+      <ng-container *ngIf="tableModel.isLink(colName)">
+        <a [href]="tableModel.render(colName, emp)">{{emp[colName]}}</a>
+      </ng-container>
+      <ng-container *ngIf="!tableModel.isLink(colName)">
+        {{tableModel.render(colName, emp)}}
+      </ng-container>
+    </td>
   </tr>
   </tbody>
 </table>

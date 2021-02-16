@@ -1,0 +1,10 @@
+:host {
+  padding: 0 1rem;
+
+  &.ng-dirty.ng-invalid,
+  &.ng-touched.ng-invalid {
+    .form-errors {
+      display: block;
+    }
+  }
+}
