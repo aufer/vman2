@@ -1,4 +1,19 @@
 <h1>Zeiterfassung</h1>
 <form [formGroup]="formGroup">
-  <abi-select formControlName="employeeSelection" [options]="employees" [displayProperty]="'firstName'"></abi-select>
+  <div class="d-flex d-flex--align-stretch">
+    <abi-select formControlName="employeeSelection"
+                [options]="employees"
+                [displayProperty]="'firstName'"></abi-select>
+
+    <div class="week-control">
+      <button class="week-control__btn" (click)="setWeek('prev')"><</button>
+      <button class="week-control__btn" (click)="setWeek('today')">{{weekDays[0] | date: 'dd.MM'}}-{{weekDays[6] | date: 'dd.MM.yyyy'}}</button>
+      <button class="week-control__btn" (click)="setWeek('next')">></button>
+    </div>
+  </div>
 </form>
+
+<time-weekly [employee]="selectedEmployee" [day]="currentDay" (weekUpdate)="weekDays = $event"></time-weekly>
+
+
+

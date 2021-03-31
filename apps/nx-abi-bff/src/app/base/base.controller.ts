@@ -37,6 +37,7 @@ export class BaseController<T extends Document> {
 
   @Delete()
   async delete(@Body() entity: T): Promise<ApiResource<T>> {
+    console.log('delete', entity);
     return from(await this.service.delete(entity));
   }
 

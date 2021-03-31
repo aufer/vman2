@@ -1,0 +1,45 @@
+.time-table {
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  thead td {
+
+    &.today {
+      background-color: map-get($color-direct, direct-orange-light);
+    }
+
+    &.future {
+      background-color: map-get($color-grey-tones, grey-tone-7);
+      color: map-get($color-grey-tones, grey-tone-3);
+    }
+  }
+}
+
+select {
+  margin-top: 3px
+}
+
+.week-control {
+  &__btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 6px;
+    border: 1px solid map-get($color-grey-tones, grey-tone-1);
+  }
+}
+
+.time-input {
+  input {
+    color: inherit;
+    width: 32px;
+  }
+
+  &.has-error {
+    color: red;
+  }
+}

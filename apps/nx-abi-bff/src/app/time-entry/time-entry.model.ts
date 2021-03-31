@@ -8,10 +8,10 @@ export type TimeEntryDoc = TimeEntry & Document;
 @Schema()
 export class TimeEntry {
   @Prop()
-  start: Date;
+  day: Date;
 
   @Prop()
-  end: Date;
+  hours: number;
 
   @Prop()
   break: number;
@@ -19,7 +19,7 @@ export class TimeEntry {
   @Prop()
   details?: string;
 
-  @Prop({type: mongoose.Schema.Types.ObjectId})
+  @Prop({type: mongoose.Schema.Types.ObjectId, ref: Employee})
   employee: Employee
 }
 

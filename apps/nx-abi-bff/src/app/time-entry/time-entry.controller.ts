@@ -1,7 +1,7 @@
-import { Controller, Get, Param }            from '@nestjs/common';
-import { ApiResource, BaseController, from } from '../base/base.controller';
-import { TimeEntryService }        from './time-entry.service';
-import { TimeEntry, TimeEntryDoc } from './time-entry.model';
+import { Controller, Get, Param } from '@nestjs/common';
+import { BaseController }         from '../base/base.controller';
+import { TimeEntryService }       from './time-entry.service';
+import { TimeEntryDoc }           from './time-entry.model';
 
 @Controller({
   path: 'time'
@@ -12,13 +12,27 @@ export class TimeEntryController extends BaseController<TimeEntryDoc> {
     super(service);
   }
 
-  @Get(':employeeId/:dateOfMonth')
-  getMonthForEmployee(@Param() params): ApiResource<TimeEntry[]> {
+  @Get('month/:employeeId/:dateOfMonth')
+  async getMonthForEmployee(@Param() params) {
     const employee = params.employeeId;
     const dateOfMonth = params.dateOfMonth;
 
     if (!employee) return;
 
-    return from(this.service.getMonthForEmployee(employee, dateOfMonth));
+    return await this.service.getMonthForEmployee(employee, dateOfMonth);
+  }
+
+  @Get('week/:employeeId/:startDate')
+  async getWeekForEmployee(@Param() params): Promise<any> {
+    const employee = params.employeeId;
+    const startDate = params.startDate;
+
+    if (!employee) return;
+    if (!startDate) return;
+
+    return {
+      time: Date.now(),
+      data: await this.service.getWeekForEmployee(employee, startDate),
+    };
   }
 }

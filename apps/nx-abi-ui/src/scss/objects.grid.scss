@@ -1,0 +1,22 @@
+$flex-spacing: space-between, space-around, stretch;
+$flex-align: stretch;
+
+.d-flex {
+  display: flex;
+
+  @each $spacing in $flex-spacing {
+    &--#{$spacing} {
+      justify-content: $spacing;
+    }
+  }
+
+  @each $alignment in $flex-align {
+    &--align-#{$alignment} {
+      align-items: $alignment;
+    }
+  }
+}
+
+.flex {
+  flex: 0 1 auto
+}

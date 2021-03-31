@@ -1,0 +1,2596 @@
+{
+  "time_increment": "15",
+  "staff": {
+    "name": "Andre Ufer",
+    "id": 23
+  },
+  "day_totals": {
+    "2021-02-19": 29700,
+    "2021-02-17": 36900,
+    "2021-02-18": 36900,
+    "2021-02-16": 29700,
+    "2021-02-15": 36900
+  },
+  "activities": {
+    "activity_126002": {
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "engagement_id": "137",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "suggested": "0",
+      "id": "126002",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "committed": "0",
+      "scheduled": "0",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "630",
+      "subject": "Time Entry - Health Guild",
+      "edit_time": "1",
+      "total": 1800,
+      "activity_timestamp": "12:00pm",
+      "class_id": "1",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "activity_date": "2021-02-17",
+      "company_id": "418",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:16 (CET)",
+      "activity_time": "1800",
+      "ta_id": "0"
+    },
+    "activity_125292": {
+      "id": "125292",
+      "suggested": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "128",
+      "task_id": "1791",
+      "total_committed": 0,
+      "activity_type": "with",
+      "committed": "0",
+      "scheduled": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 3600,
+      "subject": "Time Entry - STR Mgmt",
+      "edit_time": "1",
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 17, 2021 @ 12:27 (CET)",
+      "activity_time": "3600",
+      "company_id": "418",
+      "activity_date": "2021-02-16",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0"
+    },
+    "activity_126534": {
+      "activity_date": "2021-02-19",
+      "company_id": "521",
+      "report_required": "0",
+      "status": "",
+      "engagement_billable": 1,
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 17:48 (CET)",
+      "activity_time": "10800",
+      "edit_time": "1",
+      "subject": "Time Entry - Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "class_id": "1",
+      "total": 10800,
+      "activity_timestamp": "2:48pm",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "activity_type": "with",
+      "total_committed": 0,
+      "task_id": "2905",
+      "scheduled": "0",
+      "committed": "0",
+      "total_suggested": 0,
+      "is_billable": "yes",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "engagement_id": "510",
+      "id": "126534",
+      "suggested": "0"
+    },
+    "activity_126485": {
+      "class_id": "1",
+      "total": 0,
+      "activity_timestamp": "4:00pm",
+      "subject": "KXU Meets Health Guild - How Noise Influences our Health",
+      "edit_time": "0",
+      "activity_time": "0",
+      "body": " What we learned about the impact of noise on your health based on the\nEberspacher project that we finished in November. Here's what we\nlearned about noise and how it can influence your health. - MAXIME VAN\nHEESWIJK & KAROLIN STRIEGEL",
+      "activity_date": "2021-02-19",
+      "company_id": "418",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "id": "126485",
+      "suggested": "0",
+      "total_suggested": 0,
+      "attendees": "Tim Dobbins, Aline Negreiros Barbosa, Sebastian Sauer, Bjoern Frank, Jan Schminke, Sven Martinov, Fabian Pfannes, Felix Koschmidder, Arne Kösel, David Sixomphon, Marco Plank-Jorge, Jessica Williams, Ulrich Hölscher, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Christin Caggegi, Christoph Schuster, Ester Harter, Fabian Maschewski, FangYi Li, Ksenia Ergotic, Steffen Bendel, Leon Schlechtriem, Sebastian Best, Simon Seidl, Thomas Lippl, Florian Engelke, Margarethe Höhne, Vito Natalia, Matthias Mückshoff, Niraliben Gambhava, Helena Kock, René Kretzschmar, Andreas Haimerl, Malin Klingsell, Axel Schübeler, Maximilian Stöckl, Vivian Schneider, Andreea Ion, Jyothi Mohan, Dario Soller",
+      "is_billable": "yes",
+      "time_range": "4:00pm-5:00pm",
+      "class_title": "Default",
+      "engagement_id": "124",
+      "engagement_table": "milestone",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "task_id": "576",
+      "committed": "0",
+      "scheduled": "3600",
+      "total_scheduled": 3600,
+      "edit_billable": "1"
+    },
+    "activity_124018": {
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "activity_time": "0",
+      "body": "Tactical MANTAC board:\nhttps://kaiserxlabs.atlassian.net/jira/software/projects/MANTAC/boards/91\n\n\n------\nApart from the Jira tasks in the management board we should use this\nmeeting to inform each other about relevant topics. One proposal would\nbe a new block to share:\n\n\nNews and updates from all the Kaiser locations (5min each)\n_ Projects\n_ Prospects\n_ People / Team\n_ Miscellaneous (Events, revelations...)\n\n\nLet's give it a go and work from there. If we require further topics\ne.g. discipline specific ones, or updates from the management we may\nwork out after testing this format. Looking forward to it.\n\n\nReference MGMT Jira board:\nhttps://kaiserxlabs.atlassian.net/jira/software/projects/KXLMGMT/boards/44?selectedIssue=KXLMGMT-232",
+      "subject": "MGMT Meeting ",
+      "edit_time": "0",
+      "class_id": "1",
+      "total": 0,
+      "activity_timestamp": "10:35am",
+      "total_scheduled": 3300,
+      "edit_billable": "1",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "task_id": "125",
+      "committed": "0",
+      "scheduled": "3300",
+      "total_suggested": 0,
+      "time_range": "10:35am-11:30am",
+      "attendees": "Norbert Neumeister, Eva Mallent, Martin Snajdr, Sebastian Sauer, Bjoern Frank, Jan Schminke, Marco Plank-Jorge, Jessica Williams, Ulrich Hölscher, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne, Tini Reiter, Vivian Schneider",
+      "is_billable": "yes",
+      "class_title": "Default",
+      "engagement_id": "59",
+      "engagement_table": "milestone",
+      "id": "124018",
+      "suggested": "0"
+    },
+    "schedule_849337": {
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "title": "Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "task_id": "2905",
+      "total_committed": 1578,
+      "activity_type": "committed",
+      "scheduled": "0",
+      "committed": "1578",
+      "is_billable": "yes",
+      "time_range": "",
+      "total_suggested": 0,
+      "engagement_table": "job",
+      "engagement_id": "510",
+      "id": "849337",
+      "suggested": "0",
+      "company_id": "521",
+      "activity_date": "2021-02-19",
+      "status": "",
+      "engagement_billable": 1,
+      "activity_time": "0",
+      "is_scheduled_task": "1",
+      "edit_time": "0",
+      "subject": "",
+      "total": 0
+    },
+    "activity_125999": {
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "3034",
+      "total_committed": 0,
+      "activity_type": "with",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "suggested": "0",
+      "id": "125999",
+      "engagement_id": "587",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "activity_time": "9000",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:16 (CET)",
+      "ta_id": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-17",
+      "activity_timestamp": "12:00pm",
+      "total": 9000,
+      "class_id": "1",
+      "edit_time": "1",
+      "subject": "Time Entry - Regular Meetings"
+    },
+    "activity_125288": {
+      "company_id": "521",
+      "activity_date": "2021-02-16",
+      "status": "",
+      "engagement_billable": 1,
+      "report_required": "0",
+      "ta_id": "0",
+      "activity_time": "14400",
+      "body": "Time entry made by Andre Ufer on Feb 17, 2021 @ 12:26 (CET)",
+      "subject": "Time Entry - Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "edit_time": "1",
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 14400,
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "task_id": "2905",
+      "total_committed": 0,
+      "activity_type": "with",
+      "scheduled": "0",
+      "committed": "0",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "engagement_id": "510",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "id": "125288",
+      "suggested": "0"
+    },
+    "activity_125872": {
+      "id": "125872",
+      "suggested": "0",
+      "total_suggested": 0,
+      "time_range": "12:45pm-1:15pm",
+      "attendees": "Andre Ufer, Christoph Schuster",
+      "is_billable": "yes",
+      "class_title": "Default",
+      "engagement_id": "595",
+      "engagement_table": "milestone",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "task_id": "3057",
+      "committed": "0",
+      "scheduled": "1800",
+      "total_scheduled": 1800,
+      "edit_billable": "1",
+      "class_id": "1",
+      "total": 0,
+      "activity_timestamp": "12:45pm",
+      "subject": "Christoph / Buchi / Andre Website",
+      "edit_time": "0",
+      "activity_time": "0",
+      "body": "Moin!\n\nIch möchte mich mal nach dem aktuellen Stand erkundigen, da sich evtl\nandere Opportunities für den Buchi auftun, die eher früher als später\nstarten könnten. Und nach dem was ich bisher so gehört habe, scheint\nsich das mit der Website ja noch etwas zu ziehen.\n\nDaher die Einladung zum kurzen Austausch.\n\nViele Grüße\nAndre",
+      "activity_date": "2021-02-18",
+      "company_id": "418",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0
+    },
+    "activity_126005": {
+      "subject": "Time Entry - STR Mgmt",
+      "edit_time": "1",
+      "class_id": "1",
+      "total": 5400,
+      "activity_timestamp": "12:00pm",
+      "activity_date": "2021-02-18",
+      "company_id": "418",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "ta_id": "0",
+      "activity_time": "5400",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:17 (CET)",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "engagement_id": "128",
+      "id": "126005",
+      "suggested": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "1791",
+      "committed": "0",
+      "scheduled": "0"
+    },
+    "activity_125193": {
+      "class_id": "1",
+      "activity_timestamp": "3:00pm",
+      "total": 0,
+      "subject": "KXL Website Redesign - Weekly",
+      "edit_time": "0",
+      "activity_time": "0",
+      "body": "Let's get going!",
+      "company_id": "418",
+      "activity_date": "2021-02-16",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "1",
+      "id": "125193",
+      "suggested": "0",
+      "time_range": "3:00pm-5:00pm",
+      "attendees": "Christoph Schuster, Eva Mallent, Andre Ufer, Jenny Schminke",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "595",
+      "task_id": "3055",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "committed": "0",
+      "scheduled": "7200",
+      "edit_billable": "1",
+      "total_scheduled": 7200
+    },
+    "activity_120941": {
+      "suggested": "0",
+      "id": "120941",
+      "class_title": "Default",
+      "engagement_id": "1049",
+      "engagement_table": "affiliation",
+      "time_range": "1:30pm-3:00pm",
+      "attendees": "Jan-Philipp Burchard, Andre Ufer, Valentina Schichl, Anthony Pugliese, Sebastian Engel, Andreas Vetter, Sebastian Walter",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "committed": "0",
+      "scheduled": "5400",
+      "task_id": "",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "edit_billable": "0",
+      "total_scheduled": 5400,
+      "activity_timestamp": "1:30pm",
+      "total": 0,
+      "class_id": "1",
+      "edit_time": "0",
+      "subject": "Retrospektive NOLA",
+      "activity_time": "0",
+      "body": "https://allianz-agn.webex.com/allianz-agn-de/j.php?MTID=m78637c83cfc543279e0d56c5ebb824e9",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "1",
+      "company_id": "6",
+      "activity_date": "2021-02-15"
+    },
+    "activity_124025": {
+      "subject": "Daily - Pulse check",
+      "edit_time": "0",
+      "class_id": "1",
+      "activity_timestamp": "8:45am",
+      "total": 0,
+      "company_id": "418",
+      "activity_date": "2021-02-15",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "1",
+      "activity_time": "0",
+      "body": "",
+      "attendees": "Bjoern Frank, Eva Mallent, Martin Snajdr, Sebastian Sauer, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Jessica Williams, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne, Tini Reiter, Vivian Schneider",
+      "time_range": "8:45am-8:50am",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "engagement_table": "job",
+      "class_title": "Default",
+      "engagement_id": "285",
+      "id": "124025",
+      "suggested": "0",
+      "edit_billable": "1",
+      "total_scheduled": 300,
+      "task_id": "",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "committed": "0",
+      "scheduled": "300"
+    },
+    "activity_126531": {
+      "activity_time": "1800",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 17:46 (CET)",
+      "ta_id": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-19",
+      "activity_timestamp": "5:16pm",
+      "total": 1800,
+      "class_id": "1",
+      "subject": "Time Entry - Health Guild",
+      "edit_time": "1",
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "630",
+      "total_committed": 0,
+      "activity_type": "with",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "suggested": "0",
+      "id": "126531",
+      "engagement_id": "137",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "is_billable": "no",
+      "total_suggested": 0
+    },
+    "activity_126533": {
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-19",
+      "activity_time": "1800",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 17:47 (CET)",
+      "ta_id": "0",
+      "edit_time": "1",
+      "subject": "Time Entry - Themenowner Handlungsfeld \"Rollen & Verantwortlichkeiten\"",
+      "activity_timestamp": "5:17pm",
+      "total": 1800,
+      "class_id": "1",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "3097",
+      "activity_type": "with",
+      "total_committed": 0,
+      "engagement_id": "589",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "suggested": "0",
+      "id": "126533"
+    },
+    "activity_126530": {
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "task_id": "711",
+      "total_committed": 0,
+      "activity_type": "with",
+      "scheduled": "0",
+      "committed": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "engagement_id": "154",
+      "id": "126530",
+      "suggested": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-19",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 17:46 (CET)",
+      "activity_time": "2700",
+      "edit_time": "1",
+      "subject": "Time Entry - FMM",
+      "class_id": "1",
+      "activity_timestamp": "5:01pm",
+      "total": 2700
+    },
+    "activity_125291": {
+      "total_suggested": 0,
+      "is_billable": "no",
+      "class_title": "Default",
+      "engagement_id": "285",
+      "engagement_table": "job",
+      "id": "125291",
+      "suggested": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "",
+      "scheduled": "0",
+      "committed": "0",
+      "edit_time": "1",
+      "subject": "Time Entry - #285 COVID-19",
+      "class_id": "1",
+      "total": 900,
+      "activity_timestamp": "12:11pm",
+      "activity_date": "2021-02-17",
+      "company_id": "418",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "ta_id": "0",
+      "activity_time": "900",
+      "body": "Time entry made by Andre Ufer on Feb 17, 2021 @ 12:26 (CET)"
+    },
+    "activity_124157": {
+      "suggested": "0",
+      "id": "124157",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "engagement_id": "59",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "125",
+      "activity_type": "with",
+      "total_committed": 0,
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "activity_timestamp": "12:00pm",
+      "total": 3600,
+      "class_id": "1",
+      "edit_time": "1",
+      "subject": "Time Entry - Director Meetings",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:19 (CET)",
+      "activity_time": "3600",
+      "ta_id": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-15"
+    },
+    "activity_124269": {
+      "total_scheduled": 1800,
+      "edit_billable": "1",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "task_id": "1791",
+      "committed": "0",
+      "scheduled": "1800",
+      "total_suggested": 0,
+      "attendees": "Andre Ufer, Christoph Schuster, Matthias Müller",
+      "is_billable": "yes",
+      "time_range": "11:30am-12:00pm",
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "128",
+      "id": "124269",
+      "suggested": "0",
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "body": "Termin verlängert für AZL-JF-Vorbereitung oder Tensions.",
+      "activity_time": "0",
+      "subject": "Mgmt-Weekly ",
+      "edit_time": "0",
+      "class_id": "1",
+      "total": 0,
+      "activity_timestamp": "11:30am"
+    },
+    "activity_125314": {
+      "total_suggested": 0,
+      "attendees": "Martin Snajdr, Vivian Schneider, Sebastian Sauer, Bjoern Frank, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Andre Ufer, Tini Reiter",
+      "time_range": "10:30am-1:00pm",
+      "is_billable": "yes",
+      "engagement_id": "587",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "id": "125314",
+      "suggested": "0",
+      "total_scheduled": 9000,
+      "edit_billable": "1",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "task_id": "3034",
+      "committed": "0",
+      "scheduled": "9000",
+      "edit_time": "0",
+      "subject": "",
+      "class_id": "1",
+      "total": 0,
+      "activity_timestamp": "10:30am",
+      "activity_date": "2021-02-17",
+      "company_id": "418",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "activity_time": "0",
+      "body": "@Norbert @Tini: Als Contributor sollt ihr eure Stories natürlich selbst\nfür die Review vorstellen! Wir fangen deshalb mit euren Stories an und\ngehen dann zu den anderen über... Da könnt ihr dann gerne dabei sein,\nmüsst ihr aber nicht!"
+    },
+    "activity_125137": {
+      "body": "",
+      "activity_time": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "1",
+      "company_id": "418",
+      "activity_date": "2021-02-16",
+      "activity_timestamp": "8:45am",
+      "total": 0,
+      "class_id": "1",
+      "subject": "Daily - Pulse check",
+      "edit_time": "0",
+      "scheduled": "300",
+      "committed": "0",
+      "task_id": "125",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "edit_billable": "1",
+      "total_scheduled": 300,
+      "suggested": "0",
+      "id": "125137",
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "59",
+      "is_billable": "yes",
+      "attendees": "Bjoern Frank, Vivian Schneider, Martin Snajdr, Sebastian Sauer, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Jessica Williams, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne, Tini Reiter",
+      "time_range": "8:45am-8:50am",
+      "total_suggested": 0
+    },
+    "activity_125290": {
+      "body": "Time entry made by Andre Ufer on Feb 17, 2021 @ 12:26 (CET)",
+      "activity_time": "900",
+      "ta_id": "0",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "activity_date": "2021-02-16",
+      "company_id": "418",
+      "total": 900,
+      "activity_timestamp": "12:00pm",
+      "class_id": "1",
+      "edit_time": "1",
+      "subject": "Time Entry - #285 COVID-19",
+      "committed": "0",
+      "scheduled": "0",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "suggested": "0",
+      "id": "125290",
+      "class_title": "Default",
+      "engagement_id": "285",
+      "engagement_table": "job",
+      "total_suggested": 0,
+      "is_billable": "no"
+    },
+    "activity_123183": {
+      "class_title": "Default",
+      "engagement_id": "1254",
+      "engagement_table": "affiliation",
+      "time_range": "5:15pm-6:15pm",
+      "attendees": "Alexander Hahn, Andre Ufer, Sebastian Sauer, Giuseppe Foglietta",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "suggested": "0",
+      "id": "123183",
+      "edit_billable": "0",
+      "total_scheduled": 3600,
+      "committed": "0",
+      "scheduled": "3600",
+      "task_id": "",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "edit_time": "0",
+      "subject": "Digital Unit-Linked, Italy - KXL support ",
+      "activity_timestamp": "5:15pm",
+      "total": 0,
+      "class_id": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "1",
+      "company_id": "319",
+      "activity_date": "2021-02-15",
+      "body": "\n________________________________________________________________________________\n[cid:image001.png@01D7015F.737AD670] Click here to join the Teams\nMeeting Internal VC: Select \"#Teams\" in the address book and enter\nConference ID: 1249809620# External VC: Dial \"teams@vc.allianzgi.com\"\nand enter Conference ID: 1249809620# Audio only: Dial any of the\nnumbers below and enter Phone Conference ID: 537455909# Location\nNumber Argentina, Buenos Aires +54 11 5277-7223 Australia, Sydney +61\n2 8318 0137 Austria, Vienna +43 1 2056367003 Belgium,\nBruxelles/Brussels +32 2 789 41 56 Brazil, São Paulo +55 11 3181-4762\nBulgaria, Sofia +359 2 491 5199 Canada, Toronto +1 647-749-1254 China,\nAll locations +86 400 819 0857 China, All locations +86 400 842 8719\nColombia, Bogotá +57 1 3161588 Costa Rica, All locations +506 4001\n0793 Croatia, Zagreb +385 1 3445 165 Cyprus, Nicosia +357 22 232951\nCzech Republic, Prague +420 234 710 437 Denmark, All locations +45 32\n72 07 63 Dominican Republic, Santiago +1 829-947-7540 El Salvador, San\nSalvador +503 2113 3211 Estonia, Tallinn +372 660 4383 Finland,\nHelsinki +358 9 85626335 France, Paris +33 1 73 00 69 59 Georgia,\nTbilisi +995 706 777 720 Germany, Frankfurt am Main +49 69 365057532\nGreece, Athens +30 21 1198 6389 Hong Kong SAR, Hong Kong +852 3704\n2829 Hungary, Budapest +36 1 500 9163 India, Mumbai +91 22 6219 2538\nIreland, Dublin +353 1 566 1947 Israel, Tel Aviv +972 3-376-2095\nItaly, Milano +39 02 0062 4633 Japan, æ±äº¬ (Tokyo) +81 3-4510-7269\nKorea, Seoul +82 70-7488-1159 Latvia, Aluksne +371 64 331 118\nLithuania, Vilnius +370 5 204 3482 Luxembourg, Luxembourg +352 27 87\n01 40 Malaysia, Kuala Lumpur +60 3-9212 5178 Malta, Valletta +356 2776\n1624 Mexico, Mexico City +52 55 8874 4941 Netherlands, Amsterdam +31\n20 258 8570 New Zealand, Wellington +64 4-909 4408 Norway, Oslo +47 21\n40 20 58 Pakistan, Karachi +92 21 38787175 Panama, Panama City +507\n833-8651 Peru, Lima +51 1 7071529 Philippines, Manila +63 282313444\nPoland, Warsaw +48 22 161 65 79 Portugal, Lisbon +351 21 121 0434\nPuerto Rico, San Juan +1 787-520-7908 Romania, All locations +40 21\n529 2153 Russia, Moscow +7 499 350-52-74 Singapore, Singapore +65 6450\n6358 Slovakia, Bratislava +421 2/333 258 10 Slovenia, Ljubljana +386 1\n828 10 47 South Africa, Cape Town +27 21 821 4973 Spain, Madrid +34\n910 47 90 10 Sri Lanka, All locations +94 72 091 0299 Sweden,\nStockholm +46 8 505 252 34 Switzerland, Zurich/Zürich/Zurigo (Zurich)\n+41 43 210 57 89 Taiwan, Taipei +886 2 7752 4377 Thailand, Bangkok +66\n2 026 9123 Turkey, Istanbul +90 212 900 38 39 Ukraine, All locations\n+380 89 324 0167 United Kingdom, London +44 20 3443 6327 United\nStates, Chicago +1 312-270-1948 United States, Dallas +1 469-206-8600\nUnited States, Los Angeles +1 213-204-2032 United States, New York\nCity +1 347-343-2584 [!OC([CUSTOMINVITE])!]\n________________________________________________________________________________\nThis email and any files transmitted with it are intended only for the\nnamed recipients and may contain confidential and/or privileged\ninformation. If you are not the intended recipient, please do not\nread, copy, use or disclose the contents of this communication to\nothers. Instead, please notify the sender immediately and delete the\nemail. Allianz Global Investors is comprised of legal entities\noperating in multiple jurisdictions globally. For more information and\nimportant legal disclosures, including information required under\nGerman law to be provided about those entities domiciled in Germany,\nplease refer to https://www.allianzgi.com/affiliates As part of the\ncontractual relationship we may have with your company, we may process\npersonal information belonging to your workforce. For our full privacy\nstatement, please refer to\nhttps://www.allianzgi.com/en/privacy-principles/workforce#retirementtabsection",
+      "activity_time": "0"
+    },
+    "activity_126003": {
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "engagement_table": "job",
+      "class_title": "Default",
+      "engagement_id": "510",
+      "id": "126003",
+      "suggested": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "task_id": "2905",
+      "activity_type": "with",
+      "total_committed": 0,
+      "scheduled": "0",
+      "committed": "0",
+      "edit_time": "1",
+      "subject": "Time Entry - Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 9000,
+      "company_id": "521",
+      "activity_date": "2021-02-17",
+      "status": "",
+      "engagement_billable": 1,
+      "report_required": "0",
+      "ta_id": "0",
+      "activity_time": "9000",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:17 (CET)"
+    },
+    "activity_124159": {
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:19 (CET)",
+      "activity_time": "5400",
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "class_id": "1",
+      "total": 5400,
+      "activity_timestamp": "12:00pm",
+      "subject": "Time Entry - Rate Card Arbeit Andre",
+      "edit_time": "1",
+      "activity_type": "with",
+      "total_committed": 0,
+      "task_id": "3141",
+      "scheduled": "0",
+      "committed": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "id": "124159",
+      "suggested": "0",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "603"
+    },
+    "activity_124156": {
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 3600,
+      "edit_time": "1",
+      "subject": "Time Entry - Monday Meetings (MMM)",
+      "ta_id": "0",
+      "activity_time": "3600",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:19 (CET)",
+      "company_id": "418",
+      "activity_date": "2021-02-15",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "id": "124156",
+      "suggested": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "engagement_id": "59",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "task_id": "123",
+      "activity_type": "with",
+      "total_committed": 0,
+      "committed": "0",
+      "scheduled": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0
+    },
+    "activity_125302": {
+      "company_id": "418",
+      "activity_date": "2021-02-17",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "1",
+      "activity_time": "0",
+      "body": "No description provided",
+      "subject": "Daily - Pulse check",
+      "edit_time": "0",
+      "class_id": "1",
+      "activity_timestamp": "8:45am",
+      "total": 0,
+      "edit_billable": "1",
+      "total_scheduled": 300,
+      "task_id": "125",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "scheduled": "300",
+      "committed": "0",
+      "attendees": "Bjoern Frank, Vivian Schneider, Martin Snajdr, Sebastian Sauer, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne, Tini Reiter",
+      "is_billable": "yes",
+      "time_range": "8:45am-8:50am",
+      "total_suggested": 0,
+      "engagement_id": "59",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "id": "125302",
+      "suggested": "0"
+    },
+    "activity_124154": {
+      "edit_time": "1",
+      "subject": "Time Entry - #14 Internal Work",
+      "class_id": "1",
+      "total": 10800,
+      "activity_timestamp": "12:00pm",
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "0",
+      "engagement_billable": 0,
+      "status": "",
+      "ta_id": "0",
+      "activity_time": "10800",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:18 (CET)",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "class_title": "Default",
+      "engagement_id": "14",
+      "engagement_table": "job",
+      "id": "124154",
+      "suggested": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "activity_type": "with",
+      "total_committed": 0,
+      "task_id": "",
+      "scheduled": "0",
+      "committed": "0"
+    },
+    "activity_126006": {
+      "task_id": "",
+      "total_committed": 0,
+      "activity_type": "with",
+      "committed": "0",
+      "scheduled": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "id": "126006",
+      "suggested": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "class_title": "Default",
+      "engagement_id": "14",
+      "engagement_table": "job",
+      "ta_id": "0",
+      "activity_time": "7200",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:18 (CET)",
+      "company_id": "418",
+      "activity_date": "2021-02-18",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 7200,
+      "subject": "Time Entry - #14 Internal Work",
+      "edit_time": "1"
+    },
+    "activity_123664": {
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "1",
+      "company_id": "418",
+      "activity_date": "2021-02-15",
+      "body": "Agenda: - New hires - Birthdays, celebrations, and after hour hangouts -\nOut of office notices - Recent wins, losses, and lessons from our\nproject teams and the business side - Deep-dive share out about a\ncurrent project or relevant topic - Bus initiatives - General\nannouncements - \"Meet in the middle\" - Lunch on Wednesdays KXL/ATC",
+      "activity_time": "0",
+      "subject": "Weekly team meeting",
+      "edit_time": "0",
+      "activity_timestamp": "9:30am",
+      "total": 0,
+      "class_id": "1",
+      "edit_billable": "1",
+      "total_scheduled": 3600,
+      "committed": "0",
+      "scheduled": "3600",
+      "task_id": "123",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "engagement_id": "59",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "time_range": "9:30am-10:30am",
+      "attendees": "Andrea Hönle, Aline Negreiros Barbosa, Martin Snajdr, Sebastian Sauer, Bjoern Frank, Jan Schminke, Sven Martinov, Fabian Pfannes, Alexander Maiburg, Felix Koschmidder, Arne Kösel, David Sixomphon, Norbert Neumeister, Marco Plank-Jorge, Jessica Williams, Ulrich Hölscher, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Tim Dobbins, Alexander Heinemann, Christin Caggegi, Christoph Schuster, Ester Harter, Fabian Maschewski, FangYi Li, Ksenia Ergotic, Steffen Bendel, Jenny Schminke, Leon Schlechtriem, Sebastian Best, Simon Seidl, Thomas Lippl, Florian Engelke, Valentina Schichl, Margarethe Höhne, Tini Reiter, Matthias Mückshoff, Sascha Ponikelsky, Niraliben Gambhava, Helena Kock, Till Neumann, René Kretzschmar, Erekle Inashvili, Andreas Haimerl, Malin Klingsell, Axel Schübeler, Niklas Lankenau, Maximilian Stöckl, Vivian Schneider, Borys Parasochka, Andreea Ion, Jyothi Mohan, Dario Soller, Ekaterina Maiorenko",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "suggested": "0",
+      "id": "123664"
+    },
+    "activity_125289": {
+      "activity_time": "10800",
+      "body": "Time entry made by Andre Ufer on Feb 17, 2021 @ 12:26 (CET)",
+      "ta_id": "0",
+      "report_required": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "activity_date": "2021-02-16",
+      "company_id": "418",
+      "total": 10800,
+      "activity_timestamp": "12:00pm",
+      "class_id": "1",
+      "subject": "Time Entry - #14 Internal Work",
+      "edit_time": "1",
+      "scheduled": "0",
+      "committed": "0",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "suggested": "0",
+      "id": "125289",
+      "engagement_id": "14",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "total_suggested": 0,
+      "is_billable": "no"
+    },
+    "activity_126004": {
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "589",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "suggested": "0",
+      "id": "126004",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "scheduled": "0",
+      "committed": "0",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "3097",
+      "edit_time": "1",
+      "subject": "Time Entry - Themenowner Handlungsfeld \"Rollen & Verantwortlichkeiten\"",
+      "total": 9000,
+      "activity_timestamp": "12:00pm",
+      "class_id": "1",
+      "report_required": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "activity_date": "2021-02-18",
+      "company_id": "418",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:17 (CET)",
+      "activity_time": "9000",
+      "ta_id": "0"
+    },
+    "activity_126532": {
+      "edit_time": "1",
+      "subject": "Time Entry - STR Mgmt",
+      "activity_timestamp": "2:17pm",
+      "total": 12600,
+      "class_id": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-19",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 17:47 (CET)",
+      "activity_time": "12600",
+      "ta_id": "0",
+      "class_title": "Default",
+      "engagement_id": "128",
+      "engagement_table": "milestone",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "suggested": "0",
+      "id": "126532",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "1791",
+      "activity_type": "with",
+      "total_committed": 0
+    },
+    "activity_126000": {
+      "id": "126000",
+      "suggested": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "engagement_id": "589",
+      "task_id": "3097",
+      "total_committed": 0,
+      "activity_type": "with",
+      "committed": "0",
+      "scheduled": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 1800,
+      "edit_time": "1",
+      "subject": "Time Entry - Themenowner Handlungsfeld \"Rollen & Verantwortlichkeiten\"",
+      "ta_id": "0",
+      "activity_time": "1800",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:16 (CET)",
+      "company_id": "418",
+      "activity_date": "2021-02-17",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "0"
+    },
+    "activity_124160": {
+      "engagement_id": "510",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "suggested": "0",
+      "id": "124160",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "2905",
+      "activity_type": "with",
+      "total_committed": 0,
+      "edit_time": "1",
+      "subject": "Time Entry - Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "activity_timestamp": "12:00pm",
+      "total": 5400,
+      "class_id": "1",
+      "engagement_billable": 1,
+      "status": "",
+      "report_required": "0",
+      "company_id": "521",
+      "activity_date": "2021-02-15",
+      "activity_time": "5400",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:19 (CET)",
+      "ta_id": "0"
+    },
+    "activity_124155": {
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:18 (CET)",
+      "activity_time": "900",
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "class_id": "1",
+      "total": 900,
+      "activity_timestamp": "12:00pm",
+      "edit_time": "1",
+      "subject": "Time Entry - #285 COVID-19",
+      "activity_type": "with",
+      "total_committed": 0,
+      "task_id": "",
+      "scheduled": "0",
+      "committed": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "id": "124155",
+      "suggested": "0",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "engagement_id": "285"
+    },
+    "activity_125998": {
+      "task_id": "",
+      "total_committed": 0,
+      "activity_type": "with",
+      "committed": "0",
+      "scheduled": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "id": "125998",
+      "suggested": "0",
+      "is_billable": "no",
+      "total_suggested": 0,
+      "class_title": "Default",
+      "engagement_table": "job",
+      "engagement_id": "285",
+      "ta_id": "0",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:15 (CET)",
+      "activity_time": "900",
+      "company_id": "418",
+      "activity_date": "2021-02-18",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 900,
+      "subject": "Time Entry - #285 COVID-19",
+      "edit_time": "1"
+    },
+    "activity_126007": {
+      "task_id": "2905",
+      "total_committed": 0,
+      "activity_type": "with",
+      "scheduled": "0",
+      "committed": "0",
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "id": "126007",
+      "suggested": "0",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "engagement_table": "job",
+      "class_title": "Default",
+      "engagement_id": "510",
+      "ta_id": "0",
+      "activity_time": "14400",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:18 (CET)",
+      "company_id": "521",
+      "activity_date": "2021-02-18",
+      "status": "",
+      "engagement_billable": 1,
+      "report_required": "0",
+      "class_id": "1",
+      "activity_timestamp": "12:00pm",
+      "total": 14400,
+      "subject": "Time Entry - Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+      "edit_time": "1"
+    },
+    "activity_126001": {
+      "activity_time": "14400",
+      "body": "Time entry made by Andre Ufer on Feb 19, 2021 @ 08:16 (CET)",
+      "ta_id": "0",
+      "status": "",
+      "engagement_billable": 0,
+      "report_required": "0",
+      "company_id": "418",
+      "activity_date": "2021-02-17",
+      "activity_timestamp": "12:00pm",
+      "total": 14400,
+      "class_id": "1",
+      "edit_time": "1",
+      "subject": "Time Entry - #14 Internal Work",
+      "scheduled": "0",
+      "committed": "0",
+      "task_id": "",
+      "activity_type": "with",
+      "total_committed": 0,
+      "edit_billable": "1",
+      "total_scheduled": 0,
+      "suggested": "0",
+      "id": "126001",
+      "engagement_table": "job",
+      "class_title": "Default",
+      "engagement_id": "14",
+      "is_billable": "no",
+      "total_suggested": 0
+    },
+    "activity_123904": {
+      "suggested": "0",
+      "id": "123904",
+      "engagement_id": "285",
+      "class_title": "Default",
+      "engagement_table": "job",
+      "total_suggested": 0,
+      "is_billable": "yes",
+      "attendees": "Matthias Müller, Christoph Schuster, Andre Ufer, Alexander Heinemann, Ksenia Ergotic, Steffen Bendel, Leon Schlechtriem, Simon Seidl, Ekaterina Maiorenko",
+      "time_range": "8:55am-9:10am",
+      "committed": "0",
+      "scheduled": "900",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "task_id": "",
+      "total_scheduled": 900,
+      "edit_billable": "1",
+      "total": 0,
+      "activity_timestamp": "8:55am",
+      "class_id": "1",
+      "edit_time": "0",
+      "subject": "Daily REMOTE - STG Team Standup ",
+      "activity_time": "0",
+      "body": "Liebes STG KXL-Team,\n\nbesondere Umstände erfordern besondere Maßnahmen. Wie heute morgen in\nder Mail von Jenny schon angekündigt wurde soll bitte jeder der kann\nvon zuhause aus arbeiten.\nBitte sprecht und stimmt das mit euren Projekt-Teams ab. Unser\ngemeinsames Ziel soll es sein unseren Betrieb und das Projektgeschäft\naufrecht zu erhalten - nur halt eben weites gehend remote.\n\nAus diesem Grunde werden wir jeden Tag um 9Uhr ein kurzes Standup\nhaben, um uns untereinander abzustimmen, zu unterstützen oder um\nFragen zu klären.\n\nLiebe Grüße\nMatze",
+      "report_required": "1",
+      "status": "",
+      "engagement_billable": 0,
+      "activity_date": "2021-02-15",
+      "company_id": "418"
+    },
+    "activity_124158": {
+      "id": "124158",
+      "suggested": "0",
+      "total_suggested": 0,
+      "is_billable": "no",
+      "engagement_id": "128",
+      "class_title": "Default",
+      "engagement_table": "milestone",
+      "total_committed": 0,
+      "activity_type": "with",
+      "task_id": "1791",
+      "scheduled": "0",
+      "committed": "0",
+      "total_scheduled": 0,
+      "edit_billable": "1",
+      "class_id": "1",
+      "total": 7200,
+      "activity_timestamp": "12:00pm",
+      "subject": "Time Entry - STR Mgmt",
+      "edit_time": "1",
+      "ta_id": "0",
+      "activity_time": "7200",
+      "body": "Time entry made by Andre Ufer on Feb 16, 2021 @ 08:19 (CET)",
+      "activity_date": "2021-02-15",
+      "company_id": "418",
+      "report_required": "0",
+      "status": "",
+      "engagement_billable": 0
+    },
+    "activity_126567": {
+      "suggested": "0",
+      "id": "126567",
+      "engagement_table": "milestone",
+      "class_title": "Default",
+      "engagement_id": "59",
+      "attendees": "Bjoern Frank, Vivian Schneider, Martin Snajdr, Sebastian Sauer, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Jessica Williams, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne, Tini Reiter",
+      "time_range": "8:45am-8:50am",
+      "is_billable": "yes",
+      "total_suggested": 0,
+      "scheduled": "300",
+      "committed": "0",
+      "task_id": "125",
+      "total_committed": 0,
+      "activity_type": "scheduled",
+      "edit_billable": "1",
+      "total_scheduled": 300,
+      "activity_timestamp": "8:45am",
+      "total": 0,
+      "class_id": "1",
+      "subject": "Daily - Pulse check",
+      "edit_time": "0",
+      "activity_time": "0",
+      "body": "",
+      "engagement_billable": 0,
+      "status": "",
+      "report_required": "1",
+      "company_id": "418",
+      "activity_date": "2021-02-19"
+    },
+    "activity_125537": {
+      "class_title": "Default",
+      "engagement_id": "59",
+      "engagement_table": "milestone",
+      "total_suggested": 0,
+      "time_range": "8:45am-8:50am",
+      "attendees": "Bjoern Frank, Vivian Schneider, Martin Snajdr, Sebastian Sauer, Jan Schminke, Norbert Neumeister, Marco Plank-Jorge, Jessica Williams, Eva Mallent, Gabriel Baude, Andre Ufer, Matthias Müller, Margarethe Höhne",
+      "is_billable": "yes",
+      "suggested": "0",
+      "id": "125537",
+      "total_scheduled": 300,
+      "edit_billable": "1",
+      "committed": "0",
+      "scheduled": "300",
+      "activity_type": "scheduled",
+      "total_committed": 0,
+      "task_id": "125",
+      "subject": "Daily - Pulse check",
+      "edit_time": "0",
+      "total": 0,
+      "activity_timestamp": "8:45am",
+      "class_id": "1",
+      "report_required": "1",
+      "engagement_billable": 0,
+      "status": "",
+      "activity_date": "2021-02-18",
+      "company_id": "418",
+      "activity_time": "0",
+      "body": "No description provided"
+    }
+  },
+  "list": [
+    {
+      "id": "14",
+      "table": "job"
+    },
+    {
+      "id": "124",
+      "table": "milestone"
+    },
+    {
+      "table": "milestone",
+      "id": "137"
+    },
+    {
+      "table": "milestone",
+      "id": "59"
+    },
+    {
+      "id": "128",
+      "table": "milestone"
+    },
+    {
+      "id": "154",
+      "table": "milestone"
+    },
+    {
+      "table": "job",
+      "id": "510"
+    },
+    {
+      "id": "587",
+      "table": "milestone"
+    },
+    {
+      "id": "589",
+      "table": "milestone"
+    },
+    {
+      "table": "milestone",
+      "id": "603"
+    },
+    {
+      "table": "job",
+      "id": "285"
+    },
+    {
+      "table": "milestone",
+      "id": "595"
+    },
+    {
+      "table": "company",
+      "id": "6"
+    },
+    {
+      "table": "company",
+      "id": "319"
+    }
+  ],
+  "objects": {
+    "job": {
+      "285": {
+        "engagement_billable": 0,
+        "total_scheduled": 1200,
+        "title": "#285 COVID-19",
+        "total_committed": 0,
+        "tasks": [],
+        "days": {
+          "2021-02-18": {
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "suggested_time": [],
+              "committed_time": [],
+              "count": 1,
+              "scheduled_time": [],
+              "with_time": [
+                "activity_125998"
+              ],
+              "without_time": []
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "total": 900,
+            "subtotal": 0
+          },
+          "2021-02-17": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "total": 900,
+            "subtotal": 0,
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "without_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_125291"
+              ],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          },
+          "2021-02-15": {
+            "activities": {
+              "without_time": [],
+              "with_time": [
+                "activity_124155"
+              ],
+              "scheduled_time": [
+                "activity_123904",
+                "activity_124025"
+              ],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_scheduled": 1200,
+            "total_suggested": 0,
+            "activity_count": 0,
+            "total": 900,
+            "subtotal": 0,
+            "total_committed": 0
+          },
+          "2021-02-16": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "total": 900,
+            "subtotal": 0,
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "without_time": [],
+              "with_time": [
+                "activity_125290"
+              ],
+              "scheduled_time": [],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          }
+        },
+        "total_suggested": 0,
+        "breadcrumbs": [
+          {
+            "title": "Kaiser X Internal",
+            "id": "418",
+            "table": "company"
+          }
+        ],
+        "subtotal": 3600,
+        "table": "job",
+        "total": 3600,
+        "activity_count": 6,
+        "children": [],
+        "id": "285"
+      },
+      "14": {
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "title": "#14 Internal Work",
+        "total_committed": 0,
+        "tasks": [],
+        "days": {
+          "2021-02-17": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 14400,
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "without_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_126001"
+              ],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          },
+          "2021-02-18": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 7200,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "count": 1,
+              "with_time": [
+                "activity_126006"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            }
+          },
+          "2021-02-16": {
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 10800,
+            "total_committed": 0,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "without_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_125289"
+              ],
+              "count": 1
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0
+          },
+          "2021-02-15": {
+            "activity_count": 0,
+            "total": 10800,
+            "subtotal": 0,
+            "total_committed": 0,
+            "activities": {
+              "suggested_time": [],
+              "committed_time": [],
+              "count": 1,
+              "without_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_124154"
+              ]
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0
+          }
+        },
+        "total_suggested": 0,
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "id": "418",
+            "title": "Kaiser X Internal"
+          }
+        ],
+        "table": "job",
+        "total": 43200,
+        "subtotal": 85500,
+        "activity_count": 4,
+        "children": [
+          "124",
+          "137",
+          "59",
+          "128",
+          "154"
+        ],
+        "id": "14"
+      },
+      "510": {
+        "total": 0,
+        "breadcrumbs": [
+          {
+            "id": "521",
+            "title": "BOB 29948 - Nova Leben",
+            "table": "company"
+          }
+        ],
+        "table": "job",
+        "subtotal": 54000,
+        "activity_count": 0,
+        "id": "510",
+        "children": [],
+        "tasks": [
+          "2905"
+        ],
+        "total_suggested": 0,
+        "days": {},
+        "total_committed": 0,
+        "title": "#510 NOVA Leben | NOLA Dev Q1-Q4 2021",
+        "engagement_billable": 1,
+        "total_scheduled": 0
+      },
+      "538": {
+        "total_scheduled": 0,
+        "total_committed": 0,
+        "title": "#538 Clear Skies Initiative",
+        "total_suggested": 0,
+        "days": {},
+        "tasks": [],
+        "id": "538",
+        "children": [
+          "587",
+          "589"
+        ],
+        "breadcrumbs": null,
+        "subtotal": 21600,
+        "table": "job",
+        "total": 0,
+        "activity_count": 0
+      },
+      "562": {
+        "title": "#562 Rate Card Evolution",
+        "total_committed": 0,
+        "total_scheduled": 0,
+        "breadcrumbs": null,
+        "subtotal": 5400,
+        "table": "job",
+        "total": 0,
+        "activity_count": 0,
+        "children": [
+          "603"
+        ],
+        "id": "562",
+        "tasks": [],
+        "days": {},
+        "total_suggested": 0
+      },
+      "348": {
+        "breadcrumbs": null,
+        "table": "job",
+        "activity_count": 0,
+        "total": 0,
+        "subtotal": 0,
+        "id": "348",
+        "children": [
+          "595"
+        ],
+        "tasks": [],
+        "total_suggested": 0,
+        "days": {},
+        "total_committed": 0,
+        "title": "#348 KXL Website",
+        "total_scheduled": 0
+      }
+    },
+    "milestone": {
+      "589": {
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "title": "Project Work",
+        "total_committed": 0,
+        "days": {},
+        "total_suggested": 0,
+        "tasks": [
+          "3097"
+        ],
+        "children": [],
+        "id": "589",
+        "subtotal": 12600,
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "title": "Kaiser X Internal",
+            "id": "418"
+          },
+          {
+            "id": "538",
+            "title": "#538 Clear Skies Initiative",
+            "table": "job"
+          }
+        ],
+        "table": "milestone",
+        "total": 0,
+        "activity_count": 0
+      },
+      "603": {
+        "title": "Modelle erarbeiten und evaluieren",
+        "total_committed": 0,
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "children": [],
+        "id": "603",
+        "table": "milestone",
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "title": "Kaiser X Internal",
+            "id": "418"
+          },
+          {
+            "table": "job",
+            "id": "562",
+            "title": "#562 Rate Card Evolution"
+          }
+        ],
+        "total": 0,
+        "subtotal": 5400,
+        "activity_count": 0,
+        "days": {},
+        "total_suggested": 0,
+        "tasks": [
+          "3141"
+        ]
+      },
+      "154": {
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "total_committed": 0,
+        "title": "Team Specific - STG Team",
+        "tasks": [
+          "711"
+        ],
+        "total_suggested": 0,
+        "days": {},
+        "table": "milestone",
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "id": "418",
+            "title": "Kaiser X Internal"
+          },
+          {
+            "title": "#14 Internal Work",
+            "id": "14",
+            "table": "job"
+          }
+        ],
+        "subtotal": 2700,
+        "activity_count": 0,
+        "total": 0,
+        "id": "154",
+        "children": []
+      },
+      "59": {
+        "title": "Regular Meetings",
+        "total_committed": 0,
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "children": [],
+        "id": "59",
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "title": "Kaiser X Internal",
+            "id": "418"
+          },
+          {
+            "table": "job",
+            "title": "#14 Internal Work",
+            "id": "14"
+          }
+        ],
+        "total": 0,
+        "table": "milestone",
+        "subtotal": 7200,
+        "activity_count": 0,
+        "days": {},
+        "total_suggested": 0,
+        "tasks": [
+          "125",
+          "123"
+        ]
+      },
+      "128": {
+        "breadcrumbs": [
+          {
+            "id": "418",
+            "title": "Kaiser X Internal",
+            "table": "company"
+          },
+          {
+            "table": "job",
+            "title": "#14 Internal Work",
+            "id": "14"
+          }
+        ],
+        "subtotal": 28800,
+        "table": "milestone",
+        "total": 0,
+        "activity_count": 0,
+        "id": "128",
+        "children": [],
+        "tasks": [
+          "1791"
+        ],
+        "total_suggested": 0,
+        "days": {},
+        "total_committed": 0,
+        "title": "Team Specific",
+        "engagement_billable": 0,
+        "total_scheduled": 0
+      },
+      "137": {
+        "total_suggested": 0,
+        "days": {},
+        "tasks": [
+          "630"
+        ],
+        "id": "137",
+        "children": [],
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "title": "Kaiser X Internal",
+            "id": "418"
+          },
+          {
+            "title": "#14 Internal Work",
+            "id": "14",
+            "table": "job"
+          }
+        ],
+        "activity_count": 0,
+        "table": "milestone",
+        "total": 0,
+        "subtotal": 3600,
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "total_committed": 0,
+        "title": "Guild work"
+      },
+      "124": {
+        "tasks": [
+          "576"
+        ],
+        "days": {},
+        "total_suggested": 0,
+        "activity_count": 0,
+        "breadcrumbs": [
+          {
+            "id": "418",
+            "title": "Kaiser X Internal",
+            "table": "company"
+          },
+          {
+            "table": "job",
+            "title": "#14 Internal Work",
+            "id": "14"
+          }
+        ],
+        "table": "milestone",
+        "subtotal": 0,
+        "total": 0,
+        "children": [],
+        "id": "124",
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "title": "Growth",
+        "total_committed": 0
+      },
+      "587": {
+        "days": {},
+        "total_suggested": 0,
+        "tasks": [
+          "3034"
+        ],
+        "children": [],
+        "id": "587",
+        "breadcrumbs": [
+          {
+            "table": "company",
+            "title": "Kaiser X Internal",
+            "id": "418"
+          },
+          {
+            "table": "job",
+            "title": "#538 Clear Skies Initiative",
+            "id": "538"
+          }
+        ],
+        "subtotal": 9000,
+        "table": "milestone",
+        "total": 0,
+        "activity_count": 0,
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "title": "Meetings / Workshops",
+        "total_committed": 0
+      },
+      "595": {
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "title": "Redesign Website",
+        "total_committed": 0,
+        "tasks": [
+          "3055",
+          "3057"
+        ],
+        "days": {},
+        "total_suggested": 0,
+        "breadcrumbs": [
+          {
+            "title": "Kaiser X Internal",
+            "id": "418",
+            "table": "company"
+          },
+          {
+            "table": "job",
+            "title": "#348 KXL Website",
+            "id": "348"
+          }
+        ],
+        "subtotal": 0,
+        "table": "milestone",
+        "total": 0,
+        "activity_count": 0,
+        "children": [],
+        "id": "595"
+      }
+    },
+    "task": {
+      "630": {
+        "total_scheduled": 0,
+        "engagement_billable": 0,
+        "total_committed": 0,
+        "title": "Health Guild",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-19": {
+            "total_committed": 0,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 1800,
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "count": 1,
+              "without_time": [],
+              "with_time": [
+                "activity_126531"
+              ],
+              "scheduled_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            }
+          },
+          "2021-02-17": {
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "with_time": [
+                "activity_126002"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "count": 1
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "total": 1800,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total_committed": 0
+          }
+        },
+        "id": "630",
+        "table": "task",
+        "activity_count": 2,
+        "subtotal": 0,
+        "total": 3600
+      },
+      "2905": {
+        "engagement_billable": 1,
+        "total_scheduled": 0,
+        "total_committed": 1578,
+        "title": "Frontend Engineering Dir.-Lvl 50% Q1+2 - AU",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-18": {
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 14400,
+            "total_committed": 0,
+            "activities": {
+              "scheduled_time": [],
+              "with_time": [
+                "activity_126007"
+              ],
+              "without_time": [],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0
+          },
+          "2021-02-17": {
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_126003"
+              ],
+              "without_time": [],
+              "count": 1
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 9000
+          },
+          "2021-02-19": {
+            "activities": {
+              "count": 1,
+              "without_time": [],
+              "with_time": [
+                "activity_126534"
+              ],
+              "scheduled_time": [],
+              "suggested_time": [],
+              "committed_time": [
+                "schedule_849337"
+              ]
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 10800,
+            "total_committed": 1578
+          },
+          "2021-02-15": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 5400,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_124160"
+              ],
+              "without_time": [],
+              "count": 1
+            }
+          },
+          "2021-02-16": {
+            "activity_count": 0,
+            "total": 14400,
+            "subtotal": 0,
+            "total_committed": 0,
+            "activities": {
+              "count": 1,
+              "without_time": [],
+              "scheduled_time": [],
+              "with_time": [
+                "activity_125288"
+              ],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 0
+          }
+        },
+        "activity_count": 6,
+        "table": "task",
+        "total": 54000,
+        "subtotal": 0,
+        "id": "2905"
+      },
+      "576": {
+        "total_scheduled": 3600,
+        "engagement_billable": 0,
+        "total_committed": 0,
+        "title": "KXL University",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-19": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 0,
+            "total_scheduled": 3600,
+            "total_suggested": 0,
+            "activities": {
+              "scheduled_time": [
+                "activity_126485"
+              ],
+              "with_time": [],
+              "without_time": [],
+              "count": 0,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          }
+        },
+        "id": "576",
+        "table": "task",
+        "activity_count": 1,
+        "total": 0,
+        "subtotal": 0
+      },
+      "1791": {
+        "table": "task",
+        "subtotal": 0,
+        "total": 28800,
+        "activity_count": 5,
+        "id": "1791",
+        "days": {
+          "2021-02-16": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "total": 3600,
+            "subtotal": 0,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "count": 1,
+              "with_time": [
+                "activity_125292"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            }
+          },
+          "2021-02-15": {
+            "total_suggested": 0,
+            "total_scheduled": 1800,
+            "activities": {
+              "without_time": [],
+              "with_time": [
+                "activity_124158"
+              ],
+              "scheduled_time": [
+                "activity_124269"
+              ],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_committed": 0,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 7200
+          },
+          "2021-02-19": {
+            "total_committed": 0,
+            "total": 12600,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "scheduled_time": [],
+              "with_time": [
+                "activity_126532"
+              ],
+              "without_time": [],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          },
+          "2021-02-18": {
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 5400,
+            "total_committed": 0,
+            "activities": {
+              "count": 1,
+              "without_time": [],
+              "with_time": [
+                "activity_126005"
+              ],
+              "scheduled_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0
+          }
+        },
+        "total_suggested": 0,
+        "title": "STR Mgmt",
+        "total_committed": 0,
+        "engagement_billable": 0,
+        "total_scheduled": 1800
+      },
+      "3034": {
+        "title": "Regular Meetings",
+        "total_committed": 0,
+        "total_scheduled": 9000,
+        "engagement_billable": 0,
+        "id": "3034",
+        "table": "task",
+        "total": 9000,
+        "subtotal": 0,
+        "activity_count": 2,
+        "days": {
+          "2021-02-17": {
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 9000,
+            "total_committed": 0,
+            "activities": {
+              "count": 1,
+              "scheduled_time": [
+                "activity_125314"
+              ],
+              "with_time": [
+                "activity_125999"
+              ],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 9000
+          }
+        },
+        "total_suggested": 0
+      },
+      "711": {
+        "title": "FMM",
+        "total_committed": 0,
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "activity_count": 1,
+        "table": "task",
+        "subtotal": 0,
+        "total": 2700,
+        "id": "711",
+        "days": {
+          "2021-02-19": {
+            "total_committed": 0,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 2700,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "count": 1,
+              "with_time": [
+                "activity_126530"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            }
+          }
+        },
+        "total_suggested": 0
+      },
+      "3097": {
+        "id": "3097",
+        "total": 12600,
+        "table": "task",
+        "activity_count": 3,
+        "subtotal": 0,
+        "days": {
+          "2021-02-19": {
+            "total_suggested": 0,
+            "total_scheduled": 0,
+            "activities": {
+              "scheduled_time": [],
+              "with_time": [
+                "activity_126533"
+              ],
+              "without_time": [],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 1800
+          },
+          "2021-02-18": {
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "with_time": [
+                "activity_126004"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "count": 1
+            },
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 9000,
+            "total_committed": 0
+          },
+          "2021-02-17": {
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 1800,
+            "total_committed": 0,
+            "activities": {
+              "suggested_time": [],
+              "committed_time": [],
+              "count": 1,
+              "with_time": [
+                "activity_126000"
+              ],
+              "scheduled_time": [],
+              "without_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 0
+          }
+        },
+        "total_suggested": 0,
+        "title": "Themenowner Handlungsfeld \"Rollen & Verantwortlichkeiten\"",
+        "total_committed": 0,
+        "total_scheduled": 0,
+        "engagement_billable": 0
+      },
+      "123": {
+        "total_suggested": 0,
+        "days": {
+          "2021-02-15": {
+            "total_scheduled": 3600,
+            "total_suggested": 0,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "with_time": [
+                "activity_124156"
+              ],
+              "scheduled_time": [
+                "activity_123664"
+              ],
+              "without_time": [],
+              "count": 1
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 3600
+          }
+        },
+        "activity_count": 2,
+        "table": "task",
+        "total": 3600,
+        "subtotal": 0,
+        "id": "123",
+        "engagement_billable": 0,
+        "total_scheduled": 3600,
+        "total_committed": 0,
+        "title": "Monday Meetings (MMM)"
+      },
+      "3141": {
+        "total_suggested": 0,
+        "days": {
+          "2021-02-15": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 5400,
+            "total_scheduled": 0,
+            "total_suggested": 0,
+            "activities": {
+              "with_time": [
+                "activity_124159"
+              ],
+              "scheduled_time": [],
+              "without_time": [],
+              "count": 1,
+              "committed_time": [],
+              "suggested_time": []
+            }
+          }
+        },
+        "table": "task",
+        "total": 5400,
+        "activity_count": 1,
+        "subtotal": 0,
+        "id": "3141",
+        "engagement_billable": 0,
+        "total_scheduled": 0,
+        "total_committed": 0,
+        "title": "Rate Card Arbeit Andre"
+      },
+      "3057": {
+        "engagement_billable": 0,
+        "total_scheduled": 1800,
+        "total_committed": 0,
+        "title": "Design",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-18": {
+            "activities": {
+              "count": 0,
+              "without_time": [],
+              "with_time": [],
+              "scheduled_time": [
+                "activity_125872"
+              ],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_scheduled": 1800,
+            "total_suggested": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 0,
+            "total_committed": 0
+          }
+        },
+        "total": 0,
+        "table": "task",
+        "activity_count": 1,
+        "subtotal": 0,
+        "id": "3057"
+      },
+      "3055": {
+        "table": "task",
+        "total": 0,
+        "subtotal": 0,
+        "activity_count": 1,
+        "id": "3055",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-16": {
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 0,
+            "total_suggested": 0,
+            "total_scheduled": 7200,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "scheduled_time": [
+                "activity_125193"
+              ],
+              "with_time": [],
+              "without_time": [],
+              "count": 0
+            }
+          }
+        },
+        "total_committed": 0,
+        "title": "Art Direction & management",
+        "engagement_billable": 0,
+        "total_scheduled": 7200
+      },
+      "125": {
+        "total_committed": 0,
+        "title": "Director Meetings",
+        "total_scheduled": 4500,
+        "engagement_billable": 0,
+        "id": "125",
+        "activity_count": 6,
+        "table": "task",
+        "subtotal": 0,
+        "total": 3600,
+        "total_suggested": 0,
+        "days": {
+          "2021-02-19": {
+            "total_scheduled": 300,
+            "total_suggested": 0,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "without_time": [],
+              "scheduled_time": [
+                "activity_126567"
+              ],
+              "with_time": [],
+              "count": 0
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "total": 0,
+            "subtotal": 0
+          },
+          "2021-02-18": {
+            "activities": {
+              "count": 0,
+              "with_time": [],
+              "scheduled_time": [
+                "activity_125537"
+              ],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 300,
+            "subtotal": 0,
+            "activity_count": 0,
+            "total": 0,
+            "total_committed": 0
+          },
+          "2021-02-17": {
+            "total": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total_committed": 0,
+            "activities": {
+              "with_time": [],
+              "scheduled_time": [
+                "activity_125302"
+              ],
+              "without_time": [],
+              "count": 0,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 300
+          },
+          "2021-02-16": {
+            "total_suggested": 0,
+            "total_scheduled": 300,
+            "activities": {
+              "without_time": [],
+              "scheduled_time": [
+                "activity_125137"
+              ],
+              "with_time": [],
+              "count": 0,
+              "committed_time": [],
+              "suggested_time": []
+            },
+            "total_committed": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total": 0
+          },
+          "2021-02-15": {
+            "activity_count": 0,
+            "total": 3600,
+            "subtotal": 0,
+            "total_committed": 0,
+            "activities": {
+              "suggested_time": [],
+              "committed_time": [],
+              "count": 1,
+              "with_time": [
+                "activity_124157"
+              ],
+              "scheduled_time": [
+                "activity_124018"
+              ],
+              "without_time": []
+            },
+            "total_suggested": 0,
+            "total_scheduled": 3300
+          }
+        }
+      }
+    },
+    "contract": {},
+    "company": {
+      "6": {
+        "total_scheduled": 5400,
+        "total_committed": 0,
+        "title": "Allianz Deutschland AG",
+        "total_suggested": 0,
+        "days": {
+          "2021-02-15": {
+            "total_committed": 0,
+            "total": 0,
+            "activity_count": 0,
+            "subtotal": 0,
+            "total_suggested": 0,
+            "total_scheduled": 5400,
+            "activities": {
+              "committed_time": [],
+              "suggested_time": [],
+              "without_time": [],
+              "with_time": [],
+              "scheduled_time": [
+                "activity_120941"
+              ],
+              "count": 0
+            }
+          }
+        },
+        "tasks": [],
+        "id": "6",
+        "children": [],
+        "subtotal": 0,
+        "breadcrumbs": [],
+        "table": "company",
+        "activity_count": 1,
+        "total": 0
+      },
+      "319": {
+        "activity_count": 1,
+        "breadcrumbs": [],
+        "table": "company",
+        "subtotal": 0,
+        "total": 0,
+        "id": "319",
+        "children": [],
+        "tasks": [],
+        "total_suggested": 0,
+        "days": {
+          "2021-02-15": {
+            "activity_count": 0,
+            "total": 0,
+            "subtotal": 0,
+            "total_committed": 0,
+            "activities": {
+              "count": 0,
+              "with_time": [],
+              "scheduled_time": [
+                "activity_123183"
+              ],
+              "without_time": [],
+              "suggested_time": [],
+              "committed_time": []
+            },
+            "total_scheduled": 3600,
+            "total_suggested": 0
+          }
+        },
+        "total_committed": 0,
+        "title": "Allianz Global Investors GmbH",
+        "total_scheduled": 3600
+      }
+    }
+  }
+}

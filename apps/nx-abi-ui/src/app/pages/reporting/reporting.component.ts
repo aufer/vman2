@@ -2,20 +2,21 @@ import * as moment                            from 'moment';
 import { Component, OnInit }                  from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IEmployee }                          from '@nx-abi-mgmt/nx-abi-shared';
-import { EmployeeService }                    from '../../services';
+import { EmployeeService, TimeService }       from '../../services';
 
 @Component({
-  templateUrl: 'time.component.html'
+  templateUrl: 'reporting.component.html'
 })
-export class TimeComponent implements OnInit {
+export class ReportingComponent implements OnInit {
   employees: IEmployee[];
   selectedEmployee: IEmployee;
   formGroup: FormGroup;
 
   currentDay = moment();
-  weekDays: moment.Moment[] = new Array(7).fill(moment());
 
-  constructor(private employeeSvc: EmployeeService, private fb: FormBuilder) {
+  model: any;
+
+  constructor(private employeeSvc: EmployeeService, private fb: FormBuilder, private timeSvc: TimeService) {
   }
 
   ngOnInit() {
@@ -29,7 +30,6 @@ export class TimeComponent implements OnInit {
       .catch(error => {
         console.error(error);
       });
-
   }
 
   buildForm() {
@@ -39,16 +39,31 @@ export class TimeComponent implements OnInit {
 
     this.formGroup.valueChanges.subscribe(m => {
       this.selectedEmployee = m.employeeSelection;
-    })
+      this.getReport();
+    });
   }
 
-  setWeek(direction: 'prev' | 'next' | 'today') {
+  get sum() {
+    if (!this.model) return 0;
+
+    return Object.values(this.model.entries).filter(e => e.hours).reduce((sum, e) => sum + e.hours, 0);
+  }
+
+  setMonth(direction: 'prev' | 'next' | 'today') {
     if (direction === 'today') {
       this.currentDay = moment();
-      return;
+    } else {
+      const monthsToAdd = direction === 'next' ? 1 : -1;
+      this.currentDay = moment(this.currentDay).add(monthsToAdd, 'month');
     }
 
-    const daysToAdd = direction === 'next' ? 7 : -7;
-    this.currentDay = moment(this.currentDay).add(daysToAdd, 'days');
+    this.getReport();
+  }
+
+  private getReport() {
+    this.timeSvc.getMonthlySheet(this.selectedEmployee, this.currentDay).then(val => {
+      console.log(val);
+      this.model = val;
+    });
   }
 }

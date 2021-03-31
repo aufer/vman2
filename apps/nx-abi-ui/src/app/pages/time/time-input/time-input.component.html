@@ -1,0 +1,5 @@
+<form [formGroup]="formGroup">
+  <div class="time-input" [class.has-error]="!formGroup.valid">
+    <input type="text" formControlName="start">:<input type="text" formControlName="end">
+  </div>
+</form>

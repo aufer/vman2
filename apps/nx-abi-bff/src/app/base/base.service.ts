@@ -22,6 +22,6 @@ export abstract class BaseService<T extends Document> {
   }
 
   delete(record: T): Promise<T> {
-    return this.data.findByIdAndDelete(record._id).exec();
+    return this.data.findByIdAndDelete(record.id).exec();
   }
 }

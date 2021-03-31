@@ -10,7 +10,7 @@ import { PageWithTable, TableConfig } from '../../util';
 export class MembersComponent extends PageWithTable<IMember> {
 
   private _tableConfig: TableConfig<IMember> = {
-    hiddenColumns: ['sepaRef', 'street', 'streetNo', 'addition', 'postCode', 'bic'],
+    hiddenColumns: ['sepaRef', 'street', 'streetNo', 'addition', 'postCode', 'bic', 'phone', 'email', 'premium', 'iban', 'birthDate', 'mobile'],
     columnConfigs: [
       {name: 'joined', isDate: true},
       {name: 'email', isLink: true, linkPrefix: 'mailto'},

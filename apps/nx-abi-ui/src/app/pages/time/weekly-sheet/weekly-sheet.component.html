@@ -1,0 +1,24 @@
+<div class="timesheet">
+  <p>Weekly timesheet for {{employee?.firstName}}</p>
+
+  <div class="time-table">
+    <table>
+      <thead>
+      <td *ngFor="let day of model?.days" [class.future]="isInFuture(day)" [class.today]="isToday(day)">
+        {{day | date: 'E'}}<br>
+        {{day | date:'dd.MM'}}
+      </td>
+      </thead>
+      <tbody>
+      <tr>
+        <td *ngFor="let day of model?.days">
+          <abi-time-input *ngIf="!isInFuture(day)"
+                          [hours]="model?.entries[day]?.hours"
+                          (update)="updateTime($event, day)"
+          ></abi-time-input>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -63,7 +63,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "nx-abi-ui:build",
-            "proxyConfig": "apps/nx-abi-ui/src/proxy.json"
+            "proxyConfig": "apps/nx-abi-ui/src/proxy.json",
+            "port": 4500
           },
           "configurations": {
             "production": {
