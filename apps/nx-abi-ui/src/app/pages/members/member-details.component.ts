@@ -1,7 +1,9 @@
-import { Component }      from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient }     from '@angular/common/http';
-import { IMember }        from '@nx-abi-mgmt/nx-abi-shared';
+import { Component }                    from '@angular/core';
+import { ActivatedRoute }               from '@angular/router';
+import { HttpClient }                   from '@angular/common/http';
+import { Store }                        from '@ngrx/store';
+import { IMember }                      from '@nx-abi-mgmt/nx-abi-shared';
+import { StoreModel, MembersSelectors } from '../../store';
 
 @Component({
   templateUrl: 'member-details.component.html'
@@ -9,10 +11,8 @@ import { IMember }        from '@nx-abi-mgmt/nx-abi-shared';
 export class MemberDetailsComponent {
   member: IMember;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
+  constructor(private route: ActivatedRoute, private http: HttpClient, private store: Store<StoreModel>) {
     const id = route.snapshot.paramMap.get('id');
-    http.get('http://localhost:3333/api/members/' + id).toPromise().then((res: { data: IMember }) => {
-      this.member = res.data;
-    })
+    store.select(MembersSelectors.selectMemberById(id)).subscribe(m => this.member = m);
   }
 }

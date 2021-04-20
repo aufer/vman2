@@ -1,11 +1,11 @@
-import { Document, Model } from 'mongoose';
+import { Document, Model, Types } from 'mongoose';
 
 export abstract class BaseService<T extends Document> {
   protected constructor(protected data: Model<T>) {
   }
 
-  getAll(): Promise<T[]> {
-    return this.data.find().exec();
+  async getAll(): Promise<T[]> {
+    return  this.data.find().exec();
   }
 
   getById(id: string): Promise<T> {
@@ -13,12 +13,13 @@ export abstract class BaseService<T extends Document> {
   }
 
   create(record: T): Promise<T> {
-    const entity = new this.data(record);
-    return entity.save();
+    return new this.data(record).save();
   }
 
-  update(record: any): Promise<T> {
-    return this.data.findByIdAndUpdate(record._id, record).exec();
+  update(record: any, upsert = false): Promise<T> {
+    if (upsert && !record.id) record.id = new Types.ObjectId();
+    console.log('UPDATE', record);
+    return this.data.findByIdAndUpdate(record.id, record, {upsert, new: true}).exec();
   }
 
   delete(record: T): Promise<T> {

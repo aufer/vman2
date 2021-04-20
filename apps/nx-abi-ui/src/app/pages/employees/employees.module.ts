@@ -1,18 +1,20 @@
-import { CommonModule }           from '@angular/common';
-import { NgModule }               from '@angular/core';
-import { EmployeesComponent }     from './employees.component';
-import { EmployeesRoutingModule } from './employees.routing';
-import { TableModule }            from '../../components/table/table.module';
-import { PageModule }             from '../../components/page/page.module';
+import { CommonModule }             from '@angular/common';
+import { NgModule }                 from '@angular/core';
+import { ReactiveFormsModule }      from '@angular/forms';
+import { EmployeesComponent }       from './employees.component';
+import { EmployeesRoutingModule }   from './employees.routing';
+import { EmployeeDetailsComponent } from './employee-details.component';
+import { EmployeeFormComponent }    from './employee-form.component';
+import { SharedComponentsModule }   from '../../components/shared-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     EmployeesRoutingModule,
-    TableModule,
-    PageModule,
+    SharedComponentsModule,
   ],
-  declarations: [EmployeesComponent]
+  declarations: [EmployeesComponent, EmployeeDetailsComponent, EmployeeFormComponent]
 })
 export class EmployeesModule {
 }

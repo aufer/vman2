@@ -1,26 +1,33 @@
-<table>
+<abi-loading-spinner *ngIf="state === 'pending'"></abi-loading-spinner>
+
+<p *ngIf="state === 'error'">Sorry. Something went wrong</p>
+<p *ngIf="state === 'empty'">These are not the elements you are looking for</p>
+
+<table *ngIf="state === 'loaded'">
   <thead>
   <tr>
-    <th>#</th>
-    <th></th>
-    <th *ngFor="let col of tableModel?.columns" (click)="tableModel.orderBy(col)" [class.active]="tableModel.config.orderBy === col">
-      {{col}}
+    <th *ngIf="!skipLinks">#</th>
+    <th *ngIf="!skipLinks"></th>
+    <th *ngFor="let col of tableModel?.columns"
+        (click)="tableModel.orderBy(col)"
+        [class.active]="tableModel.config.orderBy === col">
+      {{'table.column.' + col | translate}}
       <span *ngIf="tableModel.config.orderBy === col">
-          {{tableModel.getOrder(col) === 'asc' ? '^' : 'v'}}
-        </span>
+        {{tableModel.getOrder(col) === 'asc' ? '^' : 'v'}}
+      </span>
     </th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let emp of tableModel?.data; let i = index">
-    <td (click)="elementSelected.next(emp)"><a href="javascript:void(0)">{{i}}</a></td>
-    <td (click)="editElement.next(emp)"><a href="javascript:void(0)">Edit</a></td>
+  <tr *ngFor="let entity of tableModel?.data; let i = index">
+    <td *ngIf="!skipLinks"><a [routerLink]="[entity.id]">{{i}}</a></td>
+    <td *ngIf="!skipLinks"><a [routerLink]="['edit', entity.id]">{{'actions.edit' | translate}}</a></td>
     <td *ngFor="let colName of tableModel?.columns">
       <ng-container *ngIf="tableModel.isLink(colName)">
-        <a [href]="tableModel.render(colName, emp)">{{emp[colName]}}</a>
+        <a [href]="tableModel.render(colName, entity)">{{entity[colName]}}</a>
       </ng-container>
       <ng-container *ngIf="!tableModel.isLink(colName)">
-        {{tableModel.render(colName, emp)}}
+        {{tableModel.render(colName, entity)}}
       </ng-container>
     </td>
   </tr>

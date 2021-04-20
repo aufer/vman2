@@ -1,12 +1,12 @@
 import { Controller }       from '@nestjs/common';
-import { EmployeeDoc }      from './employees.model';
+import { Employee }         from './employees.model';
 import { EmployeesService } from './employees.service';
 import { BaseController }   from '../base/base.controller';
 
 @Controller({
-  path: 'employees'
+  path: 'api/employees'
 })
-export class EmployeesController extends BaseController<EmployeeDoc>{
+export class EmployeesController extends BaseController<Employee> {
 
   constructor(protected empSvc: EmployeesService) {
     super(empSvc);

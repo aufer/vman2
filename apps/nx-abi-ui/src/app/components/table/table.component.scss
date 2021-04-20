@@ -1,9 +1,17 @@
+@import '../../../scss/variables';
+
+:host {
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+}
+
 table {
   font-size: 14px;
-  width: 100%;
 
   &, th, td {
-    border: 1px solid #8e8e8e;
+    border-top: 1px solid map-get($color-grey-tones, grey-tone-6);
+    border-bottom: 1px solid map-get($color-grey-tones, grey-tone-6);
     border-collapse: collapse;
     white-space: nowrap;
   }
@@ -14,12 +22,17 @@ table {
   }
 
   th {
-    background-color: #fecece;
+    background-color: map-get($color-grey-tones, grey-tone-7);
+    color: map-get($color-grey-tones, grey-tone-1);
     text-align: left;
     cursor: pointer;
 
     &.active {
-      background-color: #debebe;
+      background-color: map-get($color-grey-tones, grey-tone-6);
+    }
+
+    &:hover {
+      background-color: map-get($color-grey-tones, grey-tone-6);
     }
   }
 

@@ -1,0 +1,28 @@
+body {
+  background-color: map-get($color-grey-tones, grey-tone-8);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.75rem 0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #007bfa;
+}

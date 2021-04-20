@@ -1,12 +1,10 @@
-import { Document }                    from "mongoose";
+import * as mongoose                   from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Confession, EmploymentState } from '@nx-abi-mgmt/nx-abi-shared';
+import { User }                        from '../users/user.model';
+import { idTransformer }               from '../util/schema-utils';
 
-export type EmployeeDoc = Employee & Document;
-
-@Schema()
-export class Employee {
-
+@Schema(idTransformer)
+export class Employee extends mongoose.Document {
   @Prop()
   firstName?: string;
   @Prop()
@@ -22,7 +20,8 @@ export class Employee {
   @Prop()
   addition?: string;
   @Prop()
-  location?: string;
+  city?: string;
+
   @Prop()
   postCode?: string;
 
@@ -32,6 +31,8 @@ export class Employee {
   mobile?: string;
   @Prop()
   email?: string;
+  @Prop()
+  workEmail?: string;
 
   @Prop()
   startDate?: Date;
@@ -68,6 +69,9 @@ export class Employee {
 
   @Prop()
   eTin?: string;
+
+  @Prop({type: mongoose.Schema.Types.ObjectId, ref: User})
+  user?: User;
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);

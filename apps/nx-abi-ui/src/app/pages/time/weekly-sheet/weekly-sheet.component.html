@@ -1,24 +1,43 @@
 <div class="timesheet">
-  <p>Weekly timesheet for {{employee?.firstName}}</p>
+  <h2>Weekly timesheet for {{employee?.firstName}}</h2>
 
   <div class="time-table">
-    <table>
-      <thead>
-      <td *ngFor="let day of model?.days" [class.future]="isInFuture(day)" [class.today]="isToday(day)">
-        {{day | date: 'E'}}<br>
-        {{day | date:'dd.MM'}}
-      </td>
-      </thead>
-      <tbody>
-      <tr>
-        <td *ngFor="let day of model?.days">
-          <abi-time-input *ngIf="!isInFuture(day)"
-                          [hours]="model?.entries[day]?.hours"
-                          (update)="updateTime($event, day)"
-          ></abi-time-input>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <form [formGroup]="formGroup">
+      <table>
+        <thead>
+        <th></th>
+        <th *ngFor="let day of (model$ | async)?.days" [class.future]="dateUtils.isInFuture(day)" [class.today]="dateUtils.isToday(day)">
+          {{'calendar.weekdays.' + (day | date: 'E' | lowercase) | translate}}<br>
+          {{day | date:'dd.MM'}}
+        </th>
+        <th>Summe<br>(Ziel {{dateUtils.hToIString(employee?.workingHours)}})</th>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Arbeitszeit</td>
+          <td *ngFor="let day of (model$ | async)?.days">
+            <abi-time-input *ngIf="!dateUtils.isInFuture(day)"
+                            [hours]="(model$ | async)?.entries[day]?.hours"
+                            (update)="updateTime($event, day)"
+            ></abi-time-input>
+          </td>
+          <td>
+            <abi-time-input [hours]="sum$ | async" [readonly]="true"></abi-time-input>
+          </td>
+        </tr>
+        <tr>
+          <td>Bemerkungen</td>
+          <td *ngFor="let day of (model$ | async)?.days">
+            <abi-text-input *ngIf="!dateUtils.isInFuture(day)"
+                            (change)="updateComment($event.target.value, day)" [name]="day"
+                            [formControlName]="day"
+                            [multiline]="true"
+                            [withoutLabel]="true"></abi-text-input>
+          </td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
   </div>
 </div>

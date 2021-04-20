@@ -1,0 +1,27 @@
+<div>
+  <h2>Auswertung Mitglieder</h2>
+
+  <section>
+    <h3 class="mb-m">Mitglieder nach Wohnort</h3>
+
+    <abi-table [tableConfig]="memberByLocationTableConfig"
+               [data]="memberyByLocation$ | async"
+               [state]="'loaded'"
+               [skipLinks]="true"
+    ></abi-table>
+    <table>
+      <thead>
+        <tr>
+          <th>Ort</th>
+          <th>Anzahl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of memberyByLocation$ | async">
+          <td>{{entry.key}}</td>
+          <td>{{entry.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

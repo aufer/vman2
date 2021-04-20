@@ -1,11 +1,9 @@
-import { Document }                    from "mongoose";
+import { Document }                    from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { MemberState }                 from '@nx-abi-mgmt/nx-abi-shared';
+import { idTransformer }               from '../util/schema-utils';
 
-export type MemberDoc = Member & Document
-
-@Schema()
-export class Member {
+@Schema(idTransformer)
+export class Member extends Document {
   @Prop()
   firstName?: string;
   @Prop()

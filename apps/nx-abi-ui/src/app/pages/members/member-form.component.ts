@@ -1,16 +1,18 @@
-import { Component, OnInit }     from '@angular/core';
-import { FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute }        from '@angular/router';
-import { IMember }                   from '@nx-abi-mgmt/nx-abi-shared';
-import { FormComponent, FormConfig } from '../../util';
+import { Component, OnInit }                    from '@angular/core';
+import { FormGroup, Validators }                from '@angular/forms';
+import { ActivatedRoute }                       from '@angular/router';
+import { Store }                                from '@ngrx/store';
+import { IMember }                              from '@nx-abi-mgmt/nx-abi-shared';
+import { StoreModel }                           from '../../store';
+import { DateUtils, FormComponent, FormConfig } from '../../util';
 
 @Component({
   templateUrl: 'member-form.component.html'
 })
 export class MemberFormComponent extends FormComponent<IMember> implements OnInit {
 
-  constructor(protected route: ActivatedRoute) {
-    super(route);
+  constructor(protected route: ActivatedRoute, protected store: Store<StoreModel>) {
+    super(route, store);
   }
 
   get name() {
@@ -44,22 +46,14 @@ export class MemberFormComponent extends FormComponent<IMember> implements OnIni
     const form = super.buildForm();
 
     if (this.entity) {
-      this.entity.birthDate = <any>this.formatDate(this.entity?.birthDate);
-      this.entity.joined = <any>this.formatDate(this.entity?.joined);
+      this.entity = {
+        ...this.entity,
+        birthDate: <any>DateUtils.toIsoDateString(this.entity?.birthDate),
+        joined: <any>DateUtils.toIsoDateString(this.entity?.joined),
+      } as IMember;
       form.patchValue(this.entity);
     }
 
     return form;
-  }
-
-  private formatDate(date) {
-    if (!date) return;
-    const d = new Date(date);
-    let month = '' + (d.getMonth() + 1);
-    let day = '' + d.getDate();
-    const year = d.getFullYear();
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-    return [year, month, day].join('-');
   }
 }

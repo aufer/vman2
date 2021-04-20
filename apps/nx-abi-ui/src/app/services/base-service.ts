@@ -5,8 +5,8 @@ import { ApiConfig }   from './api-config';
 export class BaseService {
   protected http: HttpClient;
 
-  constructor(protected apiConfig: ApiConfig) {
+  constructor(protected apiConfig: ApiConfig, protected httpClient?: HttpClient) {
     const injector = AppInjector.getInjector();
-    this.http = injector.get(HttpClient);
+    this.http = httpClient || injector.get(HttpClient);
   }
 }

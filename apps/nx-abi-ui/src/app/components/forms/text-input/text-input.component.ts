@@ -16,7 +16,13 @@ export class TextInputComponent implements ControlValueAccessor {
   type: 'text' | 'date' | 'number' | 'password' = 'text';
 
   @Input()
+  withoutLabel: boolean;
+
+  @Input()
   disabled: boolean;
+
+  @Input()
+  multiline: boolean;
 
   constructor(
     @Self()

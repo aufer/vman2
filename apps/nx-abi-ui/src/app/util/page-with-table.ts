@@ -1,44 +1,28 @@
-import { HttpClient }      from '@angular/common/http';
-import { Router }          from '@angular/router';
-import { TableConfig }     from './index';
-import { BehaviorSubject } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TableConfig }            from './index';
+import { BasePage }               from './base-page';
+import { Store }                  from '@ngrx/store';
+import { AppStoreModule }         from '../store';
+import { selectorMap }            from '../store/selectors';
+import { Observable }             from 'rxjs';
 
 export type LoadState = 'loaded' | 'empty' | 'error' | 'pending';
 
-export abstract class PageWithTable<T extends { _id?: string }> {
-  public data: T[];
-  public listState$ = new BehaviorSubject<LoadState>('empty');
-  private stateObservable = this.listState$.asObservable();
+export abstract class PageWithTable<T extends { id?: string }> extends BasePage {
+  public data$;
+  public loadState$;
 
-  protected constructor(protected http: HttpClient, protected router: Router) {
-    this.loadData();
+  protected constructor(protected store: Store<AppStoreModule>, protected router: Router, protected route: ActivatedRoute) {
+    super(router, route);
+    this.initData();
   }
 
-  abstract get name();
-
-  abstract get tableConfig(): TableConfig<T>;
-
-  protected loadData() {
-    this.listState$.next('pending');
-    this.http.get('//localhost:3333/api/' + this.name).toPromise()
-      .then((res: { data: T[] }) => {
-        this.data = res.data;
-        this.listState$.next('loaded');
-      })
-      .catch(error => {
-        this.listState$.next('error')
-      });
+  protected initData() {
+    this.data$ = this.store.select(selectorMap[this.name].all);
+    this.loadState$ = this.store.select(selectorMap[this.name].loadState);
   }
 
-  get loadState() {
-    return this.stateObservable;
-  }
+  abstract get name(): string;
 
-  showDetails(instance: T) {
-    this.router.navigate([this.name, instance._id]);
-  }
-
-  edit(instance: T) {
-    this.router.navigate([this.name, 'edit', instance._id]);
-  }
+  abstract get tableConfig(): Observable<TableConfig<T>>;
 }

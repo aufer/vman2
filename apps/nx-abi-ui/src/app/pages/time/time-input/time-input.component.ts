@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators }                                      from '@angular/forms';
+import { DateUtils }                                                               from '../../../util';
 
 @Component({
   selector: 'abi-time-input',
@@ -8,8 +9,19 @@ import { FormBuilder, FormGroup, Validators }                                   
 })
 export class TimeInputComponent implements OnInit {
 
+  private _hours: number
+
   @Input()
-  hours: number;
+  set hours(value: number) {
+    this._hours = value ? value : 0;
+
+    if (!this.formGroup) return;
+    const time = DateUtils.hToI(this._hours);
+    this.formGroup.patchValue({start: time[0], end: time[1]});
+  }
+
+  @Input()
+  readonly: boolean;
 
   formGroup: FormGroup;
 
@@ -20,7 +32,7 @@ export class TimeInputComponent implements OnInit {
   }
 
   ngOnInit() {
-    const time = this.hToI(this.hours);
+    const time = DateUtils.hToI(this._hours);
 
     this.formGroup = this.fb.group({
       start: [time[0], Validators.pattern(/^[0-1]?[0-9]?$|^2[0-3]?$/)],
@@ -30,15 +42,10 @@ export class TimeInputComponent implements OnInit {
     this.formGroup.valueChanges.subscribe(c => {
       if (!this.formGroup.valid) return;
 
-      this.update.next(this.iToH(+c.start, +c.end));
-    })
-  }
+      this.update.next(DateUtils.iToH(+c.start, +c.end));
+    });
 
-  private hToI(hours: number): [number, number] {
-    return [Math.floor(hours), 60 * (hours - Math.floor(hours))];
-  }
-
-  private iToH(h: number, m: number): number {
-    return h + m / 60;
+    if (this.readonly)
+        Object.values(this.formGroup.controls).forEach(c => c.disable());
   }
 }

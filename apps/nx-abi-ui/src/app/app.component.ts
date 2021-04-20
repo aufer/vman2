@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component }   from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'nx-abi-mgmt-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nx-abi-ui';
+
+  constructor(public userService: UserService) {
+  }
 }

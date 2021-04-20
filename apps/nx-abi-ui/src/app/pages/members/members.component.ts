@@ -1,8 +1,10 @@
-import { HttpClient }                 from '@angular/common/http';
 import { Component }                  from '@angular/core';
-import { Router }                     from '@angular/router';
+import { ActivatedRoute, Router }     from '@angular/router';
+import { Store }                      from '@ngrx/store';
 import { IMember }                    from '@nx-abi-mgmt/nx-abi-shared';
+import { AppStoreModule }             from '../../store';
 import { PageWithTable, TableConfig } from '../../util';
+import { of }                         from 'rxjs';
 
 @Component({
   templateUrl: 'members.component.html',
@@ -10,7 +12,7 @@ import { PageWithTable, TableConfig } from '../../util';
 export class MembersComponent extends PageWithTable<IMember> {
 
   private _tableConfig: TableConfig<IMember> = {
-    hiddenColumns: ['sepaRef', 'street', 'streetNo', 'addition', 'postCode', 'bic', 'phone', 'email', 'premium', 'iban', 'birthDate', 'mobile'],
+    hiddenColumns: ['id', 'sepaRef', 'street', 'streetNo', 'addition', 'postCode', 'bic', 'phone', 'email', 'premium', 'iban', 'birthDate', 'mobile'],
     columnConfigs: [
       {name: 'joined', isDate: true},
       {name: 'email', isLink: true, linkPrefix: 'mailto'},
@@ -19,8 +21,12 @@ export class MembersComponent extends PageWithTable<IMember> {
     ]
   }
 
-  constructor(protected http: HttpClient, protected router: Router) {
-    super(http, router);
+  constructor(
+    protected router: Router,
+    protected route: ActivatedRoute,
+    protected store: Store<AppStoreModule>
+  ) {
+    super(store, router, route);
   }
 
   get name() {
@@ -28,6 +34,6 @@ export class MembersComponent extends PageWithTable<IMember> {
   }
 
   get tableConfig() {
-    return this._tableConfig;
+    return of(this._tableConfig);
   }
 }

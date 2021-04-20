@@ -27,6 +27,4 @@ const result = rows.map(row => {
   };
 })
 
-console.log(result);
-
 fs.writeFileSync(path.join('/Users/andre.ufer/Downloads', 'members.json'), JSON.stringify(result, null, 2));

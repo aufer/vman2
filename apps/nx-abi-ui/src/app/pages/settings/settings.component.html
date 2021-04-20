@@ -1,0 +1,37 @@
+<abi-page pageTitle="settings">
+  <div class="d-flex">
+    <div class="col-3 sidebar">
+      <ul class="sidebar__nav">
+        <li [class.active]="selectedType === 'users'" (click)="load('users')" class="sidebar__nav-item">Users</li>
+        <li [class.active]="selectedType === 'members'" (click)="load('members')" class="sidebar__nav-item">Members</li>
+        <li [class.active]="selectedType === 'employees'" (click)="load('employees')" class="sidebar__nav-item">
+          Employees
+        </li>
+      </ul>
+    </div>
+    <div class="col-9 sidebar-content">
+      <ng-container *ngIf="selectedType === 'users'">
+        <article *ngFor="let entry of data.data; let last = last">
+          <img [src]="entry.picture">
+          <p>{{entry.givenName}} {{entry.familyName}}</p>
+          <p>{{entry.email}}</p>
+          <p>Rolle: <span class="role">{{entry.role}}</span></p>
+          <p>Provider: {{entry.provider}}</p>
+          <p>Last login: {{entry.lastLogin}}</p>
+          <ng-container *ngIf="!last">
+            <hr>
+          </ng-container>
+        </article>
+      </ng-container>
+
+      <ng-container *ngIf="selectedType !== 'users'">
+        <article *ngFor="let entry of data.data; let last = last">
+          <pre>{{entry | json}}</pre>
+          <ng-container *ngIf="!last">
+            <hr>
+          </ng-container>
+        </article>
+      </ng-container>
+    </div>
+  </div>
+</abi-page>

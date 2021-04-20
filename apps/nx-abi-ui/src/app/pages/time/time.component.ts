@@ -1,35 +1,53 @@
-import * as moment                            from 'moment';
-import { Component, OnInit }                  from '@angular/core';
+import * as moment           from 'moment';
+import { filter, map, tap }  from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IEmployee }                          from '@nx-abi-mgmt/nx-abi-shared';
-import { EmployeeService }                    from '../../services';
+import { ActivatedRoute, Router }             from '@angular/router';
+import { Store }                              from '@ngrx/store';
+import { IEmployee, UserRole }                from '@nx-abi-mgmt/nx-abi-shared';
+import { UserService }                        from '../../services/user.service';
+import { EmployeesActions, StoreModel }       from '../../store';
+import { selectAllEmployees }                 from '../../store/employees/selectors';
+import { BasePage }                           from '../../util/base-page';
 
 @Component({
   templateUrl: 'time.component.html'
 })
-export class TimeComponent implements OnInit {
+export class TimeComponent extends BasePage implements OnInit {
   employees: IEmployee[];
   selectedEmployee: IEmployee;
-  formGroup: FormGroup;
+  formGroup: FormGroup = new FormGroup({});
+
+  UserRole = UserRole;
+
+  employees$ = this.store.select(selectAllEmployees).pipe(
+    map(v => {
+      if (this.userService.me && this.userService.me.role === UserRole.EMPLOYEE) {
+        return v.filter(emp => emp.user.id === this.userService.me.id);
+      }
+      return v;
+    }),
+    tap(employees => {
+      this.formGroup.patchValue({employeeSelection: employees[0]})
+    }),
+  );
 
   currentDay = moment();
   weekDays: moment.Moment[] = new Array(7).fill(moment());
 
-  constructor(private employeeSvc: EmployeeService, private fb: FormBuilder) {
+  constructor(
+    private userService: UserService,
+    private fb: FormBuilder,
+    protected route: ActivatedRoute,
+    protected router: Router,
+    private store: Store<StoreModel>
+  ) {
+    super(router, route);
   }
 
   ngOnInit() {
     this.buildForm();
-
-    this.employeeSvc.getEmployees()
-      .then((res: { data: IEmployee[] }) => {
-        this.employees = res.data;
-        this.formGroup.patchValue({employeeSelection: this.employees[0]});
-      })
-      .catch(error => {
-        console.error(error);
-      });
-
+    this.store.dispatch(new EmployeesActions.LoadAllRequestAction());
   }
 
   buildForm() {

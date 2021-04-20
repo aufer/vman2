@@ -2,13 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  border-bottom: 1px solid #dedede;
+  height: 72px;
+  background-color: #e8921f;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%)
 }
 
 .logo {
   flex: 1;
   max-width: 200px;
+
+  a {
+    color: white;
+  }
 }
 
 .menu {
@@ -24,11 +29,26 @@
   }
 
   &__item {
-    display: block;
-    padding: 2rem 0.5rem;
+    padding: 0 0.5rem;
 
     &:last-of-type {
+      padding-top: 1.65rem;
       padding-right: 0;
+    }
+  }
+
+  &__link {
+    color: white;
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &:hover, &--active {
+      border-radius: 0.25rem;
+      background-color: rgba(255,255,255,0.2);
     }
   }
 }

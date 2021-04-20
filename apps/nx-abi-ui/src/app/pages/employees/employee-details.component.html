@@ -1,0 +1,50 @@
+<abi-page pageTitle="employees">
+  <div>
+    <div class="actions">
+      <button [routerLink]="['/employees', 'edit', employee?.id]" class="actions__edit">Edit</button>
+      <button [routerLink]="['/employees', 'edit', employee?.id]" class="actions__delete">Delete</button>
+    </div>
+
+    <div class="data-view">
+      <div class="data-view__item">
+        <div class="data-view__label">Name</div>
+        <div class="data-view__content">{{employee?.lastName + ', ' + employee?.firstName}}</div>
+      </div>
+
+      <abi-data-view label="Anschrift">
+        {{employee?.street}} {{employee?.streetNo}}<br>
+        {{employee?.postCode}} {{employee?.location}}
+      </abi-data-view>
+
+      <abi-data-view label="Kontakt">
+        <p><a href="tel:{{employee?.phone}}">{{employee?.phone}}</a></p>
+        <p><a href="tel:{{employee?.mobile}}">{{employee?.mobile}}</a></p>
+        <p><a href="mailto:{{employee?.email}}">{{employee?.email}}</a></p>
+      </abi-data-view>
+    </div>
+
+    <h2>Kontodaten</h2>
+    <div class="data-view">
+      <abi-data-view label="IBAN">
+        {{employee?.iban}}
+      </abi-data-view>
+
+      <abi-data-view label="BIC">
+        {{employee?.bic}}
+      </abi-data-view>
+    </div>
+
+    <h2>Personaldaten</h2>
+    <div class="data-view">
+      <abi-data-view label="Status">
+        {{employee?.state}}
+      </abi-data-view>
+      <abi-data-view label="Beitrag">
+        {{employee?.salary | currency:'EUR'}}
+      </abi-data-view>w
+      <abi-data-view label="Beitritt">
+        {{employee?.startDate | date:'dd.MM.yyyy'}}
+      </abi-data-view>
+    </div>
+  </div>
+</abi-page>

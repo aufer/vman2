@@ -1,14 +1,14 @@
-import * as moment                 from 'moment';
-import { Model, ObjectId }         from "mongoose";
-import { Injectable }              from '@nestjs/common';
-import { InjectModel }             from '@nestjs/mongoose';
-import { BaseService }             from '../base/base.service';
-import { TimeEntry, TimeEntryDoc } from './time-entry.model';
+import * as moment         from 'moment';
+import { Model, ObjectId } from 'mongoose';
+import { Injectable }      from '@nestjs/common';
+import { InjectModel }     from '@nestjs/mongoose';
+import { BaseService }     from '../base/base.service';
+import { TimeEntry }       from './time-entry.model';
 
 @Injectable()
-export class TimeEntryService extends BaseService<TimeEntryDoc> {
+export class TimeEntryService extends BaseService<TimeEntry> {
 
-  constructor(@InjectModel(TimeEntry.name) protected timeEntryModel: Model<TimeEntryDoc>) {
+  constructor(@InjectModel(TimeEntry.name) protected timeEntryModel: Model<TimeEntry>) {
     super(timeEntryModel);
   }
 
@@ -17,19 +17,19 @@ export class TimeEntryService extends BaseService<TimeEntryDoc> {
    * Rule: one timeEntry per user per day
    * @param record
    */
-  create(record: TimeEntryDoc): any {
-    const employeeId = record.employee._id;
+  create(record: TimeEntry): any {
+    const employeeId = record.employee.id;
     this.data.findOneAndUpdate(
       {
         day: {
           $eq: moment(record.day).toDate()
         },
         employee: {
-          $eq: employeeId
+          $eq: employeeId as any
         }
       },
       record,
-      { upsert: true }
+      {upsert: true}
     ).exec();
   }
 

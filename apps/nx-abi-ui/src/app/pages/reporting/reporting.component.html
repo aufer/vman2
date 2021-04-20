@@ -1,38 +1,14 @@
-<h1>Reports</h1>
-<form [formGroup]="formGroup">
-  <div class="d-flex d-flex--align-stretch">
-    <abi-select formControlName="employeeSelection"
-                [options]="employees"
-                [displayProperty]="'firstName'"></abi-select>
-
-    <div class="week-control">
-      <button class="week-control__btn" (click)="setMonth('prev')"><</button>
-      <button class="week-control__btn" (click)="setMonth('today')">{{currentDay.toDate() | date: 'MMM'}}</button>
-      <button class="week-control__btn" (click)="setMonth('next')">></button>
+<abi-page pageTitle="reporting">
+  <div class="d-flex">
+    <div class="col-3 sidebar">
+      <ul class="sidebar__nav">
+        <li routerLinkActive="sidebar__link--active" routerLink="time" class="sidebar__nav-item">Arbeitszeiten</li>
+        <li routerLinkActive="sidebar__link--active" routerLink="members" class="sidebar__nav-item">Mitglieder</li>
+        <li routerLinkActive="sidebar__link--active" routerLink="employees" class="sidebar__nav-item">Employees</li>
+      </ul>
+    </div>
+    <div class="col-9 sidebar-content">
+      <router-outlet></router-outlet>
     </div>
   </div>
-</form>
-
-<div class="time-table">
-  <table *ngIf="model">
-    <thead>
-    <tr>
-      <td></td>
-      <td>Day</td>
-      <td>Hours</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let day of model?.days">
-      <td>{{day | date: 'E'}}</td>
-      <td>{{day | date: 'dd.MM'}}</td>
-      <td><span *ngIf="model?.entries[day]">{{model?.entries[day].hours}}</span></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>SUM</td>
-      <td>{{sum}}</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+</abi-page>

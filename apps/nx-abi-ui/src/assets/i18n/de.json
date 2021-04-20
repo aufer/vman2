@@ -1,0 +1,90 @@
+{
+  "page": {
+    "members": {
+      "navigation": "Mitglieder",
+      "title": "Mitglieder"
+    },
+    "employees": {
+      "navigation": "Mitarbeiter",
+      "title": "Mitarbeiter"
+    },
+    "reporting": {
+      "title": "Berichte"
+    },
+    "time": {
+      "navigation": "Zeiterfassung",
+      "title": "Zeiterfassung"
+    },
+    "settings": {
+      "title": "Einstellungen"
+    }
+  },
+  "table": {
+    "column": {
+      "id": "ID",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "birthDate": "Geburtsdatum",
+      "street": "Straße",
+      "streetNo": "Hausnummer",
+      "addition": "Adresszusatz",
+      "location": "Ort",
+      "postCode": "PLZ",
+      "phone": "Telefon",
+      "mobile": "Mobil",
+      "email": "E-Mail",
+      "startDate": "Arbeitsbeginn",
+      "state": "Status",
+      "title": "Titel",
+      "mgmt": "Führungskraft",
+      "workingHours": "Arbeitsstunden",
+      "holidays": "Urlaubstage",
+      "salary": "mtl. Gehalt",
+      "lsk": "LSK",
+      "confession": "Konfession",
+      "svNumber": "SV-Nummer",
+      "rvNumber": "RV-Nummer",
+      "eTin": "eTin",
+      "joined": "Mitglied seit",
+      "terminated": "Gekündigt",
+      "workEmail": "Accountname"
+    }
+  },
+  "calendar": {
+    "weekdays": {
+      "mon": "Montag",
+      "tue": "Dienstag",
+      "wed": "Mittwoch",
+      "thu": "Donnerstag",
+      "fri": "Freitag",
+      "sat": "Samstag",
+      "sun": "Sonntag"
+    }
+  },
+  "actions": {
+    "edit": "Edit"
+  },
+  "form": {
+    "input": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "birthDate": "Geburtstag",
+      "street": "Straße",
+      "streetNo": "Hausnummer",
+      "addition": "Adresszusatz",
+      "location": "Ort",
+      "postCode": "PLZ",
+      "phone": "Telefon",
+      "mobile": "Mobil",
+      "email": "E-Mail",
+      "premium": "Beitrag",
+      "iban": "IBAN",
+      "bic": "BIC",
+      "sepaRef": "Mandatsreferenz",
+      "state": "Status",
+      "joined": "Beitritt am",
+      "terminated": "Gekündigt am",
+      "employeeSelection": "Mitarbeiter auswählen"
+    }
+  }
+}

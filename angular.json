@@ -21,6 +21,7 @@
             "polyfills": "apps/nx-abi-ui/src/polyfills.ts",
             "tsConfig": "apps/nx-abi-ui/tsconfig.app.json",
             "aot": true,
+            "baseHref": "/app/",
             "assets": [
               "apps/nx-abi-ui/src/favicon.ico",
               "apps/nx-abi-ui/src/assets"

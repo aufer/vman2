@@ -1,7 +1,13 @@
-import * as moment                                        from 'moment';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { TimeService }                                    from '../../../services';
-import { IEmployee }                from '@nx-abi-mgmt/nx-abi-shared';
+import * as moment                                from 'moment';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormBuilder, FormGroup }                 from '@angular/forms';
+import { distinctUntilChanged, filter, map, tap } from 'rxjs/operators';
+import { Store }                                  from '@ngrx/store';
+import { IEmployee }                              from '@nx-abi-mgmt/nx-abi-shared';
+import { TimeService }                            from '../../../services';
+import { TimesheetActions }                       from '../../../store/timesheet';
+import { StoreModel }                             from '../../../store';
+import { DateUtils }                              from '../../../util';
 
 @Component({
   selector: 'time-weekly',
@@ -36,32 +42,44 @@ export class WeeklySheetComponent {
   @Output()
   weekUpdate = new EventEmitter<moment.Moment[]>();
 
-  model: any;
+  model$ = this.store.select('timesheet').pipe(
+    map(m => m.entity),
+    filter(v => !!v),
+    distinctUntilChanged(),
+    tap(m => this.weekUpdate.next(m.days.map(m => moment(m)))),
+    tap(m => this.buildForm(m)),
+  );
+  formGroup: FormGroup = new FormGroup({});
+  dateUtils = DateUtils;
 
-  constructor(private timeSvc: TimeService) {
+  constructor(private timeSvc: TimeService, private fb: FormBuilder, private store: Store<StoreModel>) {
   }
 
-  isInFuture(day) {
-    return moment(day).isAfter(moment(), 'days');
-  }
-
-  isToday(day) {
-    return moment(day).isSame(moment(), 'days');
+  get sum$() {
+    return this.model$.pipe(
+      map(m => Object.values(m.entries).reduce((s, e) => s + e.hours, 0))
+    );
   }
 
   getWeeklySheet() {
     if (!this._employee || !this._currentDay) return;
-    this.timeSvc.getWeeklySheet(this._employee, this._currentDay).then((res: any) => {
-      this.model = res.data;
-      this.weekUpdate.next(this.model.days.map(m => moment(m)));
-    });
+
+    this.store.dispatch(new TimesheetActions.LoadRequestAction({employee: this._employee, day: this._currentDay}));
   }
 
   updateTime(time, day) {
-    console.log(time, day, this.employee);
+    this.store.dispatch(new TimesheetActions.UpdateRequestAction({employee: this.employee, day: moment(day), hours: time}));
+  }
 
-    this.timeSvc.addTimeEntry(this.employee, moment(day), time).then(val => {
-      console.log(val);
-    }).catch(err => console.error(err));
+  updateComment(comment, day) {
+    this.store.dispatch(new TimesheetActions.UpdateRequestAction({employee: this.employee, day: moment(day), details: comment}));
+  }
+
+  private buildForm(model) {
+    const g = model.days.reduce((s, v) => ({
+      ...s,
+      [v]: [model.entries[v] ? model.entries[v].details : '']
+    }), {});
+    this.formGroup = this.fb.group(g)
   }
 }

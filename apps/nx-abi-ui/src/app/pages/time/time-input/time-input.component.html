@@ -1,5 +1,7 @@
 <form [formGroup]="formGroup">
-  <div class="time-input" [class.has-error]="!formGroup.valid">
-    <input type="text" formControlName="start">:<input type="text" formControlName="end">
+  <div class="time-input" [class.has-error]="!readonly && !formGroup.valid">
+    <input type="text" formControlName="start" class="form-control__input without-label">
+    :
+    <input type="text" formControlName="end" class="form-control__input without-label">
   </div>
 </form>

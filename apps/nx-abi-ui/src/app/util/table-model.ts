@@ -25,6 +25,7 @@ export class TableModel<T extends {id: string}> {
   private _data: T[];
 
   constructor(data: T[], public tableConfig: TableConfig<T> = {}) {
+    console.log('CTOR:MODEL', data);
     if (tableConfig.hiddenColumns) this.hiddenColumns.push(...tableConfig.hiddenColumns);
 
     const fields = data.map(rec => Object.keys(rec)).sort((a, b) => b.length - a.length)[0];
@@ -79,7 +80,7 @@ export class TableModel<T extends {id: string}> {
         if (this.config.orders[column] === 'asc') return ('' + aVal).localeCompare(bVal);
         return ('' + bVal).localeCompare(aVal);
       }
-    })
+    });
   }
 
   private getColumnConfigFor(column: keyof T) {

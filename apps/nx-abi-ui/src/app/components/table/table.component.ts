@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { ColumnConfig, TableConfig, TableModel }                           from '../../util/table-model';
-import { LoadState }                                                       from '../../util';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { LoadState, TableConfig, TableModel }                                  from '../../util';
 
 @Component({
   selector: 'abi-table',
@@ -8,14 +7,11 @@ import { LoadState }                                                       from 
   styleUrls: ['table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TableComponent<T extends { id: string }> {
+export class TableComponent<T extends { id: string }> implements OnChanges {
   _data: T[];
 
-  @Output()
-  elementSelected = new EventEmitter<T>();
-
-  @Output()
-  editElement = new EventEmitter<T>();
+  @Input()
+  entity: string;
 
   @Input()
   set data(data: T[]) {
@@ -30,5 +26,13 @@ export class TableComponent<T extends { id: string }> {
   @Input()
   state: LoadState;
 
+  @Input()
+  skipLinks: boolean;
+
   tableModel: TableModel<T>;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (!changes.tableConfig) return;
+    this.data = this._data;
+  }
 }

@@ -1,8 +1,6 @@
-<abi-page pageTitle="Mitglieder">
-  <abi-table [data]="data"
-             [tableConfig]="tableConfig"
-             [state]="loadState | async"
-             (elementSelected)="showDetails($event)"
-             (editElement)="edit($event)"></abi-table>
+<abi-page [pageTitle]="name">
+  <abi-table [data]="data$ | async"
+             [tableConfig]="tableConfig | async"
+             [state]="loadState$ | async"
+             [entity]="name"></abi-table>
 </abi-page>
-

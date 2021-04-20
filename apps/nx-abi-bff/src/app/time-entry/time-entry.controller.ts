@@ -1,12 +1,12 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { BaseController }         from '../base/base.controller';
+import { TimeEntry }              from './time-entry.model';
 import { TimeEntryService }       from './time-entry.service';
-import { TimeEntryDoc }           from './time-entry.model';
 
 @Controller({
-  path: 'time'
+  path: 'api/time'
 })
-export class TimeEntryController extends BaseController<TimeEntryDoc> {
+export class TimeEntryController extends BaseController<TimeEntry> {
 
   constructor(protected service: TimeEntryService) {
     super(service);

@@ -1,0 +1,25 @@
+.sidebar {
+  background-color: #fef7ea;
+  padding: 1rem;
+
+  &__nav {
+    list-style: none;
+  }
+
+  &__nav-item {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+
+    &:hover, &.active {
+      font-weight: 600;
+    }
+  }
+
+  &__link--active {
+    font-weight: 600;
+  }
+}
+
+.sidebar-content {
+  padding: 1rem;
+}

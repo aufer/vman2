@@ -1,5 +1,5 @@
-import { ControlValueAccessor, NgControl }                              from '@angular/forms';
-import { Component, forwardRef, Inject, Input, OnInit, Optional, Self } from '@angular/core';
+import { ControlValueAccessor, NgControl }                      from '@angular/forms';
+import { Component, forwardRef, Inject, Input, Optional, Self } from '@angular/core';
 
 @Component({
   selector: 'abi-select',
@@ -15,11 +15,17 @@ export class SelectComponent<T> implements ControlValueAccessor {
   @Input()
   displayProperty: keyof T;
 
+  @Input()
+  label: string;
+
+  @Input()
+  withoutLabel: boolean;
+
   constructor(
     @Self()
     @Optional()
     @Inject(forwardRef(() => NgControl))
-    private ngControl: NgControl
+    public ngControl: NgControl
   ) {
     ngControl.valueAccessor = this;
   }
@@ -48,6 +54,14 @@ export class SelectComponent<T> implements ControlValueAccessor {
   onChange(_: any) {
   }
 
-  onTouched(_: any) {
+  onTouched() {
+  }
+
+  valueChange(event) {
+    this.onChange(JSON.parse(event.target.value));
+  }
+
+  stringify(val) {
+    return JSON.stringify(val);
   }
 }

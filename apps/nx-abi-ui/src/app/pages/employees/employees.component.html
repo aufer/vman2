@@ -1,6 +1,6 @@
-<abi-page pageTitle="Mitarbeiter">
-  <abi-table
-    [data]="data"
-    [tableConfig]="tableConfig"
-  ></abi-table>
+<abi-page [pageTitle]="name">
+  <abi-table [data]="data$ | async"
+             [tableConfig]="(tableConfig | async)"
+             [state]="loadState$ | async"
+             [entity]="name"></abi-table>
 </abi-page>

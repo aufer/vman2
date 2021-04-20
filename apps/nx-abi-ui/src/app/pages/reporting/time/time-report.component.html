@@ -1,0 +1,43 @@
+<h2>Auswertung Arbeitszeiten</h2>
+
+<form [formGroup]="formGroup">
+  <div class="d-flex d-flex--align-stretch d-flex--space-between mb-m">
+    <abi-select formControlName="employeeSelection"
+                [withoutLabel]="true"
+                [options]="employees"
+                [displayProperty]="'firstName'"></abi-select>
+
+    <div class="week-control">
+      <button class="week-control__btn" (click)="setMonth('prev')"><</button>
+      <button class="week-control__btn"
+              (click)="setMonth('today')">{{currentDay.toDate() | date: 'MMM yyyy'}}</button>
+      <button class="week-control__btn" (click)="setMonth('next')">></button>
+    </div>
+  </div>
+</form>
+
+<div class="time-table">
+  <table *ngIf="model">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Day</th>
+      <th>Hours</th>
+      <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let day of model?.days" [class.sunday]="dateUtils.isSunday(day)">
+      <td>{{'calendar.weekdays.' + (day | date: 'E') | lowercase | translate}}</td>
+      <td>{{day | date: 'dd.MM'}}</td>
+      <td><span *ngIf="model?.entries[day]">{{model?.entries[day].hours | hToI}}</span></td>
+      <td><span *ngIf="model?.entries[day]">{{model?.entries[day].details}}</span></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>SUM</td>
+      <td>{{sum | hToI}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

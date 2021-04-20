@@ -1,12 +1,10 @@
-import * as mongoose                   from "mongoose";
-import { Document }                    from "mongoose";
+import * as mongoose                   from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Employee }                    from '../employees/employees.model';
+import { idTransformer }               from '../util/schema-utils';
 
-export type TimeEntryDoc = TimeEntry & Document;
-
-@Schema()
-export class TimeEntry {
+@Schema(idTransformer)
+export class TimeEntry extends mongoose.Document {
   @Prop()
   day: Date;
 
@@ -20,7 +18,7 @@ export class TimeEntry {
   details?: string;
 
   @Prop({type: mongoose.Schema.Types.ObjectId, ref: Employee})
-  employee: Employee
+  employee: Employee;
 }
 
 export const TimeEntrySchema = SchemaFactory.createForClass(TimeEntry);

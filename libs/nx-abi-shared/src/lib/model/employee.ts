@@ -1,4 +1,5 @@
 import { Document } from 'mongoose';
+import { IUser }     from './user';
 
 
 export enum Confession {
@@ -25,6 +26,7 @@ export interface IEmployee extends Document {
   phone?: string;
   mobile?: string;
   email?: string;
+  workEmail?: string;
   startDate?: Date;
   state?: EmploymentState;
   title?: string;
@@ -33,8 +35,11 @@ export interface IEmployee extends Document {
   holidays?: number;
   salary?: number;
   lsk?: number;
+  iban?: string;
+  bic?: string;
   confession?: Confession;
   svNumber?: string;
   rvNumber?: string;
   eTin?: string;
+  user?: IUser;
 }

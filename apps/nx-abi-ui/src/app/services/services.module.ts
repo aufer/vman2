@@ -1,8 +1,10 @@
 import { NgModule }         from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { API_CONFIG }       from './api-config';
-import { EmployeeService } from './employee.service';
+import { EmployeeService }  from './employee.service';
 import { TimeService }      from './time.service';
+import { UserService }      from './user.service';
+import { MembersService }   from './members.service';
 
 @NgModule({
   imports: [
@@ -16,7 +18,9 @@ import { TimeService }      from './time.service';
       },
     },
     TimeService,
-    EmployeeService
+    EmployeeService,
+    UserService,
+    MembersService,
   ]
 })
 export class ServicesModule {}

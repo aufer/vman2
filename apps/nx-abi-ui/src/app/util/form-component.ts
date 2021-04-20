@@ -4,6 +4,10 @@ import { Injectable }             from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AppInjector }            from './app.injector';
 import { FormConfig }             from './form-model';
+import { StoreModel }             from '../store';
+import { Store }                  from '@ngrx/store';
+import { selectorMap }  from '../store/selectors';
+import { filter, take } from 'rxjs/operators';
 
 const apiBase = 'http://localhost:3333/api';
 
@@ -19,7 +23,7 @@ export abstract class FormComponent<T> {
   protected http: HttpClient;
   protected fb: FormBuilder;
 
-  protected constructor(protected route: ActivatedRoute) {
+  protected constructor(protected route: ActivatedRoute, protected store: Store<StoreModel>) {
     this.injectMembers();
     this.initComponent().then(() => {
       this.formGroup = this.buildForm();
@@ -63,24 +67,26 @@ export abstract class FormComponent<T> {
   }
 
   protected async getEntity() {
-    return this.request('get', this.id).then((res: { data: T }) => {
-      this.entity = res.data;
-    })
+    if (!this.id) return;
+    await this.store.select(selectorMap[this.name].byId(this.id))
+      .pipe(filter(entity => !!entity), take(1)).toPromise()
+      .then(entity => {
+        this.entity = entity;
+      });
   }
 
   protected async saveEntity() {
-    const formValue = this.transformValue(this.formGroup.value);
-    const body = {_id: this.id, ...formValue};
+    const body = this.transformValue(this.formGroup.value);
 
     if (this.mode === 'create') {
       return this.request('post', undefined, body).then(res => {
         console.log('created new element', res);
       });
-    } else {
-      return this.request('put', this.id, body).then(res => {
-        console.log('updated element', res);
-      });
     }
+
+    return this.request('put', this.id, body).then(res => {
+      console.log('updated element', res);
+    });
   }
 
   protected transformValue(value: T) {
@@ -101,12 +107,8 @@ export abstract class FormComponent<T> {
 
   private async initComponent() {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (!this.id) {
-      this.mode = 'create';
-      return;
-    }
+    this.mode = this.id ? 'update' : 'create';
 
-    this.mode = 'update';
     await this.getEntity();
   }
 
