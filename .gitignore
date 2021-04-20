@@ -40,4 +40,5 @@ Thumbs.db
 
 # Custom stuff
 **/config/google-config.json
+**/config/jwt.json
 **/constants.ts
