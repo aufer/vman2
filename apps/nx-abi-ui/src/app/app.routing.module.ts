@@ -48,6 +48,14 @@ const routes: Routes = [
     resolve: {
       user: UserResolver
     }
+  },
+  {
+    path: 'programs',
+    loadChildren: () => import('./pages/programs/programs.module').then(m => m.ProgramsModule),
+    canActivate: [AuthGuard],
+    resolve: {
+      user: UserResolver
+    }
   }
 ];
 

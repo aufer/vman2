@@ -9,7 +9,7 @@ import { AppRoutingModule }                 from './app.routing.module';
 import { AbiFormsModule, TableModule }      from './components';
 import { UserModule }                       from './components/user/user.module';
 import { ServicesModule }                   from './services';
-import { AppStoreModule }                   from './store/store.module';
+import { AppStoreModule }                   from './store';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');

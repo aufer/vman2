@@ -8,6 +8,7 @@ import { TimeEntryModule }             from './time-entry/time-entry.module';
 import { UserModule }                  from './users/user.module';
 import { AuthModule }                  from './auth/auth.module';
 import { UnauthorizedExceptionFilter } from './util/auth-filter';
+import { RegistrationModule }          from './registrations/registration.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { UnauthorizedExceptionFilter } from './util/auth-filter';
     EmployeesModule,
     MembersModule,
     TimeEntryModule,
+    RegistrationModule,
     UserModule,
     AuthModule,
   ],

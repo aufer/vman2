@@ -6,14 +6,15 @@ import { EmployeeStoreModule }  from './employees';
 import { MembersStoreModule }   from './members';
 import { debug }                from './store-logger';
 import { TimesheetStoreModule } from './timesheet';
+import { ProgramsStoreModule }  from './programs';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     MembersStoreModule,
     EmployeeStoreModule,
     TimesheetStoreModule,
+    ProgramsStoreModule,
     StoreModule.forRoot({}, {metaReducers: [debug]}),
     EffectsModule.forRoot([]),
   ]

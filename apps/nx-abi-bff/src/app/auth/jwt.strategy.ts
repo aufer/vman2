@@ -2,7 +2,6 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy }                  from '@nestjs/passport';
 import { ExtractJwt, Strategy }              from 'passport-jwt';
 import { JWT_COOKIE_NAME, JWT_SECRET }       from '../constants';
-import { ActionLog }                         from '../util/action-log.decorator';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {

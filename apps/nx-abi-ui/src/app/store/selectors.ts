@@ -4,13 +4,14 @@ import {
   selectEmployeeById,
   selectEmployeesError,
   selectEmployeesLoadState
-} from './employees/selectors';
+}                                                                          from './employees/selectors';
+import { selectAllPrograms, selectProgramsError, selectProgramsLoadState } from './programs/selectors';
 
 type Selector = (state: any) => any;
 
 export type DefaultSelectors = {
   all: Selector,
-  byId: (id: string) => Selector,
+  byId?: (id: string) => Selector,
   error: Selector,
   loadState: Selector,
 };
@@ -28,4 +29,9 @@ export const selectorMap: {[entity: string]: DefaultSelectors} = {
     error: selectEmployeesError,
     loadState: selectEmployeesLoadState,
   },
+  programs: {
+    all: selectAllPrograms,
+    error: selectProgramsError,
+    loadState: selectProgramsLoadState,
+  }
 };

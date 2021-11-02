@@ -1,4 +1,4 @@
-import { startWith, switchMap }                                                          from 'rxjs/operators';
+import { switchMap }                                                                     from 'rxjs/operators';
 import { Injectable }                                                                    from '@angular/core';
 import { Actions, Effect, ofType }                                                       from '@ngrx/effects';
 import { EmployeeService }                                                               from '../../services';
