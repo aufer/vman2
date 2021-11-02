@@ -1,0 +1,73 @@
+<abi-page pageTitle="members">
+  <form [formGroup]="formGroup" class="d-flex d-flex--space-between">
+    <section class="form-group form-group--highlight col-6">
+      <h2>Persönliche Daten</h2>
+      <div class="form-row">
+        <abi-text-input formControlName="firstName" name="firstName"></abi-text-input>
+        <abi-text-input formControlName="lastName" name="lastName"></abi-text-input>
+      </div>
+
+      <div class="form-row">
+        <abi-text-input type="date" formControlName="birthDate" name="birthDate"></abi-text-input>
+      </div>
+
+      <div class="form-row">
+        <abi-text-input formControlName="street" name="street" class="c66"></abi-text-input>
+        <abi-text-input formControlName="streetNo" name="streetNo" class="c33"></abi-text-input>
+        <abi-text-input formControlName="addition" name="addition" class="c100" style="margin-top: 0.25rem"></abi-text-input>
+      </div>
+
+      <div class="form-row">
+        <abi-text-input formControlName="postCode" name="postCode" class="c33"></abi-text-input>
+        <abi-text-input formControlName="location" name="location" class="c66"></abi-text-input>
+      </div>
+
+      <div class="form-row">
+        <abi-text-input formControlName="phone" name="phone"></abi-text-input>
+        <abi-text-input formControlName="mobile" name="mobile"></abi-text-input>
+      </div>
+
+      <div class="form-row">
+        <abi-text-input formControlName="email" name="email"></abi-text-input>
+      </div>
+    </section>
+
+    <section class="col-6">
+      <section class="form-group">
+        <h2>Kontodaten</h2>
+        <div class="form-row">
+          <abi-text-input formControlName="iban" name="iban" class="c66"></abi-text-input>
+          <abi-text-input formControlName="bic" name="bic" class="c33"></abi-text-input>
+          <abi-text-input formControlName="sepaRef" name="sepaRef" class="c100" style="margin-top: 0.25rem"></abi-text-input>
+        </div>
+      </section>
+
+      <section class="form-group">
+      <h2>Mitgliedsdaten</h2>
+
+      <div class="form-row">
+        <div class="form-control">
+          <input type="text" id="state" formControlName="state" class="form-control__input">
+          <label for="state" class="form-control__label">{{'form.input.state' | translate}}</label>
+        </div>
+        <abi-text-input type="number" formControlName="premium" name="premium"></abi-text-input>
+      </div>
+
+
+      <div class="form-row">
+        <abi-text-input type="date" formControlName="joined" name="joined"></abi-text-input>
+        <abi-text-input type="date" formControlName="terminated" name="terminated"></abi-text-input>
+      </div>
+    </section>
+    </section>
+  </form>
+
+  <div class="actions">
+    <button class="actions__cancel" (click)="abort()">Abbrechen</button>
+    <button class="actions__save" (click)="save()">Speichern</button>
+  </div>
+
+  <div class="form-errors" *ngIf="formGroup.invalid">
+    <p>OH NO :(</p>
+  </div>
+</abi-page>

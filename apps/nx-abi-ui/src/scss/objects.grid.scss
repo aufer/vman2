@@ -1,0 +1,70 @@
+$flex-spacing: space-between, space-around, stretch;
+$flex-align: stretch;
+
+.page {
+  padding: 1rem;
+  background: white;
+  margin-top: 1rem;
+  border: 1px solid map-get($color-grey-tones, grey-tone-6);
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.d-flex {
+  display: flex;
+
+  @each $spacing in $flex-spacing {
+    &--#{$spacing} {
+      justify-content: $spacing;
+    }
+  }
+
+  @each $alignment in $flex-align {
+    &--align-#{$alignment} {
+      align-items: $alignment;
+    }
+  }
+}
+
+.flex {
+  flex: 0 1 auto
+}
+
+@for $colCount from 1 through 12 {
+  .col-#{$colCount} {
+    width: calc((100% / 12 * #{$colCount}) - 1%);
+  }
+}
+
+$sizes: (
+  xs: 0.25rem,
+  s: 0.5rem,
+  m: 1rem,
+  l: 1.5rem,
+  xl: 2rem
+);
+
+$directions: (
+  b: (bottom),
+  t: (top),
+  l: (left),
+  r: (right),
+  x: (left, right),
+  y: (top, bottom)
+);
+
+@each $key, $val in $sizes {
+  .m-#{$key} {
+    margin: $val;
+  }
+
+  @each $dir, $props in $directions {
+    .m#{$dir}-#{$key} {
+      @each $prop in $props {
+        margin-#{$prop}: $val;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.time-table {
+  table, th, td {
+    border: 1px solid map-get($color-grey-tones, grey-tone-6);
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  thead th {
+    &.today {
+      background-color: map-get($color-primary-action, primary-action-lightest);
+    }
+
+    &.future {
+      background-color: map-get($color-grey-tones, grey-tone-8);
+      color: map-get($color-grey-tones, grey-tone-4);
+    }
+  }
+
+  td {
+    padding: 0.25rem;
+    width: calc(100% / 9);
+  }
+}
+
+.week-control {
+  &__btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    padding: calc(.5rem + 1px) .75rem;
+    margin-right: 6px;
+    border: 1px solid map-get($color-grey-tones, grey-tone-1);
+  }
+}
+
+.time-input {
+  font-size: 1rem;
+
+  input {
+    color: inherit;
+    width: 2.75rem;
+    text-align: center;
+  }
+
+  &.has-error {
+    color: red;
+  }
+}
+
+.sunday {
+  background-color: map-get($color-grey-tones, grey-tone-6) !important;
+  color: map-get($color-grey-tones, grey-tone-4);
+}

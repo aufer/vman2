@@ -1,0 +1,59 @@
+.user-badge {
+  position: relative;
+
+  &__picture {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__flyout {
+    background: white;
+    border: 1px solid map-get($color-grey-tones, grey-tone-6);
+    padding: 0.75rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: calc(100% + 0.75rem);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      border: 12px solid transparent;
+      border-bottom-color: map-get($color-grey-tones, grey-tone-6);
+      width: 0;
+      height: 0;
+      top: -22px;
+      position: absolute;
+      right: 3px;
+    }
+
+    &:after {
+      border-bottom-color: white;
+      top: -21px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    p {
+      font-size: 0.75rem;
+      white-space: nowrap;
+
+      & + p {
+        margin-top: 0.25rem;
+        color: map-get($color-grey-tones, grey-tone-2);
+      }
+    }
+  }
+}

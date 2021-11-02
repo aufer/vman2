@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  padding: 0;
+
+  &.ng-dirty.ng-invalid,
+  &.ng-touched.ng-invalid {
+    .form-errors {
+      display: block;
+    }
+  }
+
+  textarea {
+    font-family: sans-serif;
+    min-height: 7rem;
+    width: 100%;
+  }
+}

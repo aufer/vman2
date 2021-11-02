@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  background-color: #e8921f;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%)
+}
+
+.logo {
+  flex: 1;
+  max-width: 200px;
+
+  a {
+    color: white;
+  }
+}
+
+.menu {
+  flex: 4;
+  height: 100%;
+
+  &__list {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    height: 100%;
+  }
+
+  &__item {
+    padding: 0 0.5rem;
+
+    &:last-of-type {
+      padding-top: 1.65rem;
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    color: white;
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &:hover, &--active {
+      border-radius: 0.25rem;
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+}

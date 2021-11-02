@@ -1,0 +1,24 @@
+<div class="user-badge" *ngIf="user">
+  <div (click)="toggleProfile($event)" class="user-badge__picture">
+    <img [src]="user.picture">
+    {{initials}}
+  </div>
+
+  <div class="user-badge__flyout" *ngIf="toggle" (click)="$event.stopPropagation();">
+    <p><img [src]="user.picture"></p>
+    <p class="strong">{{user.givenName}} {{user.familyName}}</p>
+    <p>{{user.email}}</p>
+
+    <hr>
+    <p><a href="https://mail.google.com" target="_blank">Google Mails</a></p>
+    <p><a href="https://mail.google.com" target="_blank">Google Kalender</a></p>
+    <p><a href="https://mail.google.com" target="_blank">Google Drive</a></p>
+
+    <ng-container *ngIf="user.role === UserRole.ADMIN">
+      <hr>
+      <p>
+        <a routerLink="settings" (click)="toggle = false">Einstellungen</a>
+      </p>
+    </ng-container>
+  </div>
+</div>

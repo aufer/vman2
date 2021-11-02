@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="logo">
+    <a href="/">
+      <img src="https://abi-moeglingen.de/assets/abi_logo.png" height="50">
+    </a>
+  </div>
+  <div class="menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a class="menu__link" routerLink="time" routerLinkActive="menu__link--active">Zeiterfassung</a></li>
+      <li class="menu__item"><a class="menu__link" routerLink="programs" routerLinkActive="menu__link--active">Ferien</a></li>
+      <li class="menu__item"><a class="menu__link" routerLink="reporting" routerLinkActive="menu__link--active">Reporting</a></li>
+      <li class="menu__item"><a class="menu__link" routerLink="employees" routerLinkActive="menu__link--active">Mitarbeiter</a></li>
+      <li class="menu__item"><a class="menu__link" routerLink="members" routerLinkActive="menu__link--active">Mitglieder</a></li>
+      <li class="menu__item profile">
+        <abi-user-badge [user]="userService.me"></abi-user-badge>
+      </li>
+    </ul>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

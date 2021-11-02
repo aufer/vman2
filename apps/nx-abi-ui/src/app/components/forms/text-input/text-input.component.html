@@ -1,0 +1,20 @@
+<div class="form-control" [class.invalid]="errors && errors.length > 0">
+  <input [type]="type"
+         [id]="name" class="form-control__input"
+         [value]="value"
+         [disabled]="disabled"
+         [placeholder]="'form.input.' + name | translate"
+         [class.without-label]="withoutLabel"
+         (input)="valueChange($event)"
+         *ngIf="!multiline">
+  <label *ngIf="!withoutLabel" [for]="name" class="form-control__label">{{'form.input.' + name | translate}}</label>
+  <textarea [id]="name" class="form-control__input"
+            [value]="value"
+            [disabled]="disabled"
+            (input)="valueChange($event)"
+            *ngIf="multiline"></textarea>
+</div>
+
+<div class="form-errors">
+  <p *ngFor="let err of errors">{{err}}</p>
+</div>

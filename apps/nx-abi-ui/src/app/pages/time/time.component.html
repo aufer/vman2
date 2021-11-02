@@ -1,0 +1,23 @@
+<abi-page pageTitle="time">
+  <form [formGroup]="formGroup">
+    <div class="d-flex d-flex--align-stretch d-flex--space-between">
+      <abi-select formControlName="employeeSelection"
+                  label="employeeSelection"
+                  [disabled]="(user | async)?.role === UserRole.EMPLOYEE"
+                  [options]="employees$ | async"
+                  [displayProperty]="'firstName'"></abi-select>
+
+      <div class="week-control">
+        <button class="week-control__btn" (click)="setWeek('prev')" title="eine Woche zurück"><</button>
+        <button class="week-control__btn" (click)="setWeek('today')" title="zur aktuellen Woche">{{weekDays[0] | date: 'dd.MM'}}
+          -{{weekDays[6] | date: 'dd.MM.yyyy'}}</button>
+        <button class="week-control__btn" (click)="setWeek('next')" title="eine Woche weiter">></button>
+      </div>
+    </div>
+  </form>
+
+  <time-weekly [employee]="selectedEmployee" [day]="currentDay" (weekUpdate)="weekDays = $event"></time-weekly>
+</abi-page>
+
+
+

@@ -1,0 +1,39 @@
+table {
+  font-size: 14px;
+  width: 100%;
+
+  &, th, td {
+    border-top: 1px solid map-get($color-grey-tones, grey-tone-6);
+    border-bottom: 1px solid map-get($color-grey-tones, grey-tone-6);
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 0.5rem 0.25rem;
+    word-break: keep-all;
+  }
+
+  th {
+    background-color: map-get($color-grey-tones, grey-tone-8);
+    color: map-get($color-grey-tones, grey-tone-2);
+    text-align: left;
+    cursor: pointer;
+
+    &.active {
+      background-color: map-get($color-grey-tones, grey-tone-6);
+    }
+
+    &:hover {
+      background-color: map-get($color-grey-tones, grey-tone-6);
+    }
+  }
+
+  tr {
+    background-color: white;
+
+    &:nth-of-type(odd) {
+      background-color: white;
+    }
+  }
+}

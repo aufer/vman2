@@ -1,0 +1,46 @@
+@import '../../../scss/variables';
+
+:host {
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+table {
+  font-size: 14px;
+
+  &, th, td {
+    border-top: 1px solid map-get($color-grey-tones, grey-tone-6);
+    border-bottom: 1px solid map-get($color-grey-tones, grey-tone-6);
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 0.5rem 0.25rem;
+    word-break: keep-all;
+  }
+
+  th {
+    background-color: map-get($color-grey-tones, grey-tone-7);
+    color: map-get($color-grey-tones, grey-tone-1);
+    text-align: left;
+    cursor: pointer;
+
+    &.active {
+      background-color: map-get($color-grey-tones, grey-tone-6);
+    }
+
+    &:hover {
+      background-color: map-get($color-grey-tones, grey-tone-6);
+    }
+  }
+
+  tr {
+    background-color: white;
+
+    &:nth-of-type(odd) {
+      background-color: white;
+    }
+  }
+}

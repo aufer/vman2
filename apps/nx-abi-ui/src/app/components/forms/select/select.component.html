@@ -1,0 +1,8 @@
+<div class="form-control" [class.form-control--without-label]="withoutLabel">
+  <label class="form-control__label form-control__select-label">{{'form.input.' + ngControl.name | translate}}: </label>
+
+  <select (change)="valueChange($event)" [disabled]="disabled" class="form-control__select">
+    <option *ngFor="let e of options" [value]="stringify(e)">{{e[displayProperty]}}</option>
+  </select>
+</div>
+

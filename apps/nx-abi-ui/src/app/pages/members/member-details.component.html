@@ -1,0 +1,55 @@
+<abi-page pageTitle="members">
+  <div>
+    <div class="actions">
+      <button [routerLink]="['/members', 'edit', member?.id]" class="actions__button actions__button--edit">Edit</button>
+      <button [routerLink]="['/members', 'edit', member?.id]" class="actions__button actions__button--delete">Delete</button>
+    </div>
+
+    <div class="data-view">
+      <div class="data-view__item">
+        <div class="data-view__label">Name</div>
+        <div class="data-view__content">{{member?.lastName + ', ' + member?.firstName}}</div>
+      </div>
+
+      <abi-data-view label="Anschrift">
+        {{member?.street}} {{member?.streetNo}}<br>
+        {{member?.postCode}} {{member?.location}}
+      </abi-data-view>
+
+      <abi-data-view label="Kontakt">
+        <p><a href="tel:{{member?.phone}}">{{member?.phone}}</a></p>
+        <p><a href="tel:{{member?.mobile}}">{{member?.mobile}}</a></p>
+        <p><a href="mailto:{{member?.email}}">{{member?.email}}</a></p>
+      </abi-data-view>
+    </div>
+
+    <h2>Kontodaten</h2>
+
+    <div class="data-view">
+      <abi-data-view label="IBAN">
+        {{member?.iban}}
+      </abi-data-view>
+
+      <abi-data-view label="BIC">
+        {{member?.bic}}
+      </abi-data-view>
+
+      <abi-data-view label="Mandatsref.">
+        {{member?.sepaRef}}
+      </abi-data-view>
+    </div>
+
+    <h2>Mitgliedschaft</h2>
+    <div class="data-view">
+      <abi-data-view label="Status">
+        {{member?.state}}
+      </abi-data-view>
+      <abi-data-view label="Beitrag">
+        {{member?.premium | currency:'EUR'}}
+      </abi-data-view>
+      <abi-data-view label="Beitritt">
+        {{member?.joined | date:'dd.MM.yyyy'}}
+      </abi-data-view>
+    </div>
+  </div>
+</abi-page>

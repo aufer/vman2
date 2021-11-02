@@ -1,0 +1,43 @@
+<div class="timesheet">
+  <h2>Weekly timesheet for {{employee?.firstName}}</h2>
+
+  <div class="time-table">
+    <form [formGroup]="formGroup">
+      <table>
+        <thead>
+        <th></th>
+        <th *ngFor="let day of (model$ | async)?.days" [class.future]="dateUtils.isInFuture(day)" [class.today]="dateUtils.isToday(day)">
+          {{'calendar.weekdays.' + (day | date: 'E' | lowercase) | translate}}<br>
+          {{day | date:'dd.MM'}}
+        </th>
+        <th>Summe<br>(Ziel {{dateUtils.hToIString(employee?.workingHours)}})</th>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Arbeitszeit</td>
+          <td *ngFor="let day of (model$ | async)?.days">
+            <abi-time-input *ngIf="!dateUtils.isInFuture(day)"
+                            [hours]="(model$ | async)?.entries[day]?.hours"
+                            (update)="updateTime($event, day)"
+            ></abi-time-input>
+          </td>
+          <td>
+            <abi-time-input [hours]="sum$ | async" [readonly]="true"></abi-time-input>
+          </td>
+        </tr>
+        <tr>
+          <td>Bemerkungen</td>
+          <td *ngFor="let day of (model$ | async)?.days">
+            <abi-text-input *ngIf="!dateUtils.isInFuture(day)"
+                            (change)="updateComment($event.target.value, day)" [name]="day"
+                            [formControlName]="day"
+                            [multiline]="true"
+                            [withoutLabel]="true"></abi-text-input>
+          </td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
